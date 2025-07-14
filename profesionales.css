@@ -1,0 +1,176 @@
+/* profesionales.css */
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.professionals-hero {
+    background: url('https://via.placeholder.com/1200x300?text=Nuestros+Profesionales') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.professionals-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.professionals-hero h1 {
+    position: relative;
+    z-index: 1;
+    font-size: 3em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.professionals-hero p {
+    position: relative;
+    z-index: 1;
+    font-size: 1.2em;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.professional-directory {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.professional-directory h2 {
+    font-size: 2.5em;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+}
+
+.filter-controls {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.filter-controls input[type="text"],
+.filter-controls select {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    width: 100%;
+    max-width: 300px;
+}
+
+.professional-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    justify-content: center;
+}
+
+.professional-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.professional-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.professional-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid var(--primary-color);
+}
+
+.professional-card h3 {
+    font-size: 1.5em;
+    color: var(--text-color-dark);
+    margin-bottom: 5px;
+}
+
+.professional-card .specialty {
+    font-size: 1em;
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.professional-card .description {
+    font-size: 0.95em;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.button-secondary {
+    background-color: #f0f0f0;
+    color: var(--primary-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid var(--primary-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button-secondary:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Responsive adjustments for profesionales.css */
+@media (max-width: 768px) {
+    .professionals-hero h1 {
+        font-size: 2.5em;
+    }
+
+    .professionals-hero p {
+        font-size: 1em;
+    }
+
+    .professional-directory h2 {
+        font-size: 2em;
+    }
+
+    .filter-controls {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .filter-controls input[type="text"],
+    .filter-controls select {
+        max-width: 90%;
+    }
+
+    .professional-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .professionals-hero h1 {
+        font-size: 2em;
+    }
+}

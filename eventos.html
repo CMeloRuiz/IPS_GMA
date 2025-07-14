@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grupo Médicos Asociados - Eventos</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="eventos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-top">
+            <div class="header-top-left">
+                <span style="margin-right: 20px;">
+                    <i class="fa-solid fa-phone"></i>
+                    310-409-90-29
+                </span>
+                <span>
+                    304-411-08-39
+                </span>
+            </div>
+            <div class="header-top-right">
+                <span>
+                    <i class="fa-solid fa-location-dot"></i>
+                    Sede Principal / Calle 4 #8e-84 Ubaté
+                </span>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <a href="index.html" class="logo">
+                <img src="./Images/logo.png" alt="logo">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="eventos.html" class="underline_title">Eventos</a></li>
+                    <li><a href="profesionales.html">Profesionales</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="nav-buttons">
+                <button>
+                    <i class="fa-solid fa-user-plus"></i>
+                    Afiliate ahora
+                </button>
+                <button>
+                    <i class="fa-solid fa-calendar-days"></i>
+                    Agenda tu cita
+                </button>
+            </div>
+        </div>
+
+        <script>
+
+            document.addEventListener('DOMContentLoaded', function() {
+                const mainHeader = document.querySelector('.main-header');
+                const headerTopHeight = document.querySelector('.header-top').offsetHeight;
+
+                window.addEventListener('scroll', function() {
+                    if (window.scrollY > headerTopHeight) {
+                        mainHeader.classList.add('scrolled');
+                    } else {
+                        mainHeader.classList.remove('scrolled');
+                    }
+                });
+            });
+
+        </script>
+
+    </header>
+
+    <main class="page-content events-page">
+        <section class="events-hero">
+            <h1>Nuestros Eventos</h1>
+            <p>Mantente informado sobre nuestras charlas, talleres y campañas de salud.</p>
+        </section>
+
+        <section class="upcoming-events">
+            <h2>Próximos Eventos</h2>
+            <div class="event-list">
+                <div class="event-card">
+                    <img src="./Images/alimentacion_events.jpg" alt="Taller de Nutrición">
+                    <div class="event-info">
+                        <h3>Taller: Alimentación Saludable para Toda la Familia</h3>
+                        <p class="date"><i class="far fa-calendar-alt"></i> 15 de Julio, 2024</p>
+                        <p class="time"><i class="far fa-clock"></i> 10:00 AM - 12:00 PM</p>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Salón de Conferencias GMA</p>
+                        <p>Aprende a preparar comidas nutritivas y deliciosas para tus seres queridos.</p>
+                        <a href="#" class="button-primary">Inscribirse</a>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <img src="./Images/mental_events.jpg" alt="Charla de Salud Mental">
+                    <div class="event-info">
+                        <h3>Charla: Manejo del Estrés y la Ansiedad</h3>
+                        <p class="date"><i class="far fa-calendar-alt"></i> 25 de Julio, 2024</p>
+                        <p class="time"><i class="far fa-clock"></i> 3:00 PM - 5:00 PM</p>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Auditorio Principal GMA</p>
+                        <p>Herramientas prácticas para mejorar tu bienestar emocional y reducir el estrés.</p>
+                        <a href="#" class="button-primary">Inscribirse</a>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <img src="./Images/vacuna_events.jpg" alt="Campaña de Vacunación">
+                    <div class="event-info">
+                        <h3>Campaña de Vacunación Infantil Gratuita</h3>
+                        <p class="date"><i class="far fa-calendar-alt"></i> 5 de Agosto, 2024</p>
+                        <p class="time"><i class="far fa-clock"></i> 9:00 AM - 4:00 PM</p>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Patio Central GMA</p>
+                        <p>Protege a tus hijos con las vacunas necesarias. ¡Te esperamos!</p>
+                        <a href="#" class="button-primary">Más Información</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="past-events">
+            <h2>Eventos Anteriores</h2>
+            <div class="event-grid">
+                <div class="past-event-card">
+                    <img src="./Images/diabetes_events.jpg" alt="Conferencia Diabetes">
+                    <h3>Conferencia sobre Diabetes</h3>
+                    <p class="date"><i class="far fa-calendar-alt"></i> 10 de Junio, 2024</p>
+                    <p>Charla informativa sobre prevención y manejo de la diabetes.</p>
+                </div>
+                <div class="past-event-card">
+                    <img src="./Images/auxilios_events.jpg" alt="Seminario Primeros Auxilios">
+                    <h3>Seminario de Primeros Auxilios Básicos</h3>
+                    <p class="date"><i class="far fa-calendar-alt"></i> 20 de Mayo, 2024</p>
+                    <p>Capacitación para actuar en situaciones de emergencia.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <a href="index.html" class="logo-footer">
+                    <img src="./Images/logo.png" alt="logo">
+                </a>
+                <p>Somos una institución dedicada a brindar servicios de salud de alta calidad con un enfoque humano y profesional.</p>
+            </div>
+            <div class="footer-section links">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="eventos.html">Eventos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h3>Contacto</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Calle 4 #8-84 / Ubaté</p>
+                <p><i class="fas fa-phone-alt"></i> 3104099029</p>
+                <p><i class="fas fa-phone-alt"></i> 3044110839</p>
+            </div>
+            <div class="footer-section social">
+                <h3>Síguenos</h3>
+                <div class="social-icons">
+                    <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Suscríbete para recibir notificaciones.</p>
+                    <form>
+                        <input type="email" placeholder="Tu correo electrónico">
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 Grupo Médicos Asociados. Todos los derechos reservados | Pagina Web Desarrollada por <a href="https://vortexdev.io/" target="_blank">VortexDev</a>
+        </div>
+    </footer>
+</body>
+</html>

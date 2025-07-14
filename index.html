@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grupo Médicos Asociados - Inicio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-top">
+            <div class="header-top-left">
+                <span style="margin-right: 20px;">
+                    <i class="fa-solid fa-phone"></i>
+                    310-409-90-29
+                </span>
+                <span>
+                    304-411-08-39
+                </span>
+            </div>
+            <div class="header-top-right">
+                <span>
+                    <i class="fa-solid fa-location-dot"></i>
+                    Sede Principal / Calle 4 #8e-84 Ubaté
+                </span>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <a href="index.html" class="logo">
+                <img src="./Images/logo.png" alt="logo">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="underline_title">Inicio</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="eventos.html">Eventos</a></li>
+                    <li><a href="profesionales.html">Profesionales</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="nav-buttons">
+                <button>
+                    <i class="fa-solid fa-user-plus"></i>
+                    Afiliate ahora
+                </button>
+                <button>
+                    <i class="fa-solid fa-calendar-days"></i>
+                    Agenda tu cita
+                </button>
+            </div>
+        </div>
+
+        <script>
+
+            document.addEventListener('DOMContentLoaded', function() {
+                const mainHeader = document.querySelector('.main-header');
+                const headerTopHeight = document.querySelector('.header-top').offsetHeight;
+
+                window.addEventListener('scroll', function() {
+                    if (window.scrollY > headerTopHeight) {
+                        mainHeader.classList.add('scrolled');
+                    } else {
+                        mainHeader.classList.remove('scrolled');
+                    }
+                });
+            });
+
+        </script>
+
+    </header>
+
+    <main class="page-content">
+        <section class="hero-slider">
+            <div class="slider-container">
+                <div class="slide active">
+                    <img src="./Images/nutricionista.jpg" alt="Nutrición y Dietética">
+                    <div class="overlay"></div>
+                    <div class="slide-content">
+                        <h2>Nutrición y Dietética</h2>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="./Images/psicologia.jpg" alt="Psicología Clínica">
+                    <div class="overlay"></div>
+                    <div class="slide-content">
+                        <h2>Psicología Clínica</h2>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="./Images/pediatria.jpg" alt="Pediatría">
+                    <div class="overlay"></div>
+                    <div class="slide-content">
+                        <h2>Pediatría</h2>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="./Images/enfermeria.jpg" alt="Enfermería">
+                    <div class="overlay"></div>
+                    <div class="slide-content">
+                        <h2>Enfermería</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slider-dots">
+                <span class="hero-dot active" data-slide-index="0"></span>
+                <span class="hero-dot" data-slide-index="1"></span>
+                <span class="hero-dot" data-slide-index="2"></span>
+                <span class="hero-dot" data-slide-index="3"></span>
+            </div>
+        </section>
+        
+        <section class="services-overview">
+            <h2>Nuestros Principales Servicios</h2>
+            <div class="carousel-wrapper">
+                <div class="carousel-container">
+                    <div class="carousel-track">
+                        <div class="service-card">
+                            <img src="./Images/nutricion_service.jpg" alt="Icono Nutrición y Dietética">
+                            <h3>Nutrición y Dietética</h3>
+                            <a href="./servicios.html" class="more-info-btn">Más Información</a>
+                        </div>
+
+                        <div class="service-card">
+                            <img src="./Images/psicologia_service.jpg" alt="Icono Psicología Clínica">
+                            <h3>Psicología Clínica</h3>
+                            <a href="./servicios.html" class="more-info-btn">Más Información</a>
+                        </div>
+
+                        <div class="service-card">
+                            <img src="./Images/pediatria_service.jpg" alt="Icono Pediatría">
+                            <h3>Pediatría</h3>
+                            <a href="./servicios.html" class="more-info-btn">Más Información</a>
+                        </div>
+
+                        <div class="service-card">
+                            <img src="./Images/enfermeria_service.jpg" alt="Icono Enfermería">
+                            <h3>Enfermería</h3>
+                            <a href="./servicios.html" class="more-info-btn">Más Información</a>
+                        </div>
+
+                        <div class="service-card">
+                            <img src="./Images/ginecologia_service.jpg" alt="Icono Ginecología y Obstetricia">
+                            <h3>Ginecología y Obstetricia</h3>
+                            <a href="./servicios.html" class="more-info-btn">Más Información</a>
+                        </div>
+
+                        <div class="service-card">
+                            <img src="./Images/medicina_general_service.jpg" alt="Icono Medicina General">
+                            <h3>Medicina General</h3>
+                            <a href="./servicios.html" class="more-info-btn">Más Información</a>
+                        </div>
+
+                        <div class="service-card">
+                            <img src="./Images/atencion_service.jpg" alt="Icono Atención Prioritaria 24 horas">
+                            <h3>Atención Prioritaria 24 horas</h3>
+                            <a href="./servicios.html" class="more-info-btn">Más Información</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-dots"></div>
+            </div>
+        </section>
+
+        <section class="about-us-short">
+            <div class="container">
+                <div class="content-wrapper">
+                    <div class="image-section">
+                        <div class="image-container">
+                            <div class="decorative-element large"></div>
+                            <div class="decorative-element small"></div>
+                            <div class="circle-frame">
+                                <img src="./Images/sede_principal.png" alt="Grupo Médicos Asociados - Edificio" class="building-image">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="text-section">
+                        <div class="years-badge">
+                            <div class="years-number">15+</div>
+                            <div class="years-text">años</div>
+                        </div>
+                        
+                        <h2 class="main-title">Grupo Médicos Asociados S.A.S.</h2>
+                       
+                        <p class="description">
+                            Somos una <span class="highlight">institución prestadora de servicios de salud privada</span> enfocada en la calidad de atención de nuestros usuarios. Nuestro compromiso es atender de manera oportuna con honestidad y equidad, actuamos de manera intachable, por ello somos fieles a nuestros principios éticos. Nuestro plan de funcionamiento es estar en los <span class="highlight">avances tecnológicos y científicos</span> que nos permitan un diagnóstico oportuno.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <div class="container">
+                <h2>Contáctanos</h2>
+                <p>Estamos aquí para ayudarte. Ponte en contacto con nosotros para resolver tus dudas o agendar una cita.</p>
+                
+                <div class="contact-cards">
+                    <div class="contact-card">
+                        <div class="icon">
+                            <img src="./Images/phone.png" alt="">
+                        </div>
+                        <h3>Teléfonos</h3>
+                        <p>3104099029</p>
+                        <p>3044110839</p>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="icon">
+                            <img src="./Images/location.png" alt="">
+                        </div>
+                        <h3>Ubicación</h3>
+                        <p>Calle 4 #8-84, Edificio Ricaurte / Ubaté</p>
+                    </div>
+                </div>
+                <a href="./contacto.html" class="cta-button">Ir a Contacto</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <a href="index.html" class="logo-footer">
+                    <img src="./Images/logo.png" alt="logo">
+                </a>
+                <p>Somos una institución dedicada a brindar servicios de salud de alta calidad con un enfoque humano y profesional.</p>
+            </div>
+            <div class="footer-section links">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="eventos.html">Eventos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h3>Contacto</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Calle 4 #8-84 / Ubaté</p>
+                <p><i class="fas fa-phone-alt"></i> 3104099029</p>
+                <p><i class="fas fa-phone-alt"></i> 3044110839</p>
+            </div>
+            <div class="footer-section social">
+                <h3>Síguenos</h3>
+                <div class="social-icons">
+                    <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Suscríbete para recibir notificaciones.</p>
+                    <form>
+                        <input type="email" placeholder="Tu correo electrónico">
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 Grupo Médicos Asociados. Todos los derechos reservados | Pagina Web Desarrollada por <a href="https://vortexdev.io/" target="_blank">VortexDev</a>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+    <script src="./index.js"></script>
+    <script src="./services.js"></script>
+</body>
+</html>

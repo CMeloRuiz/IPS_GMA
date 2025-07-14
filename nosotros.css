@@ -1,0 +1,169 @@
+/* nosotros.css */
+
+.about-us-page {
+    background-color: #8891a3;
+}
+
+.about-hero {
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    margin-bottom: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, #0d2a6a, #3a445a);
+}
+
+.about-hero h1 {
+    position: relative;
+    z-index: 1;
+    font-size: 3em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.about-hero p {
+    position: relative;
+    z-index: 1;
+    font-size: 1.2em;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.mission-vision-values {
+    margin-bottom: 40px;
+}
+
+.mission-vision-values .container {
+    padding: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.mission-vision-values .text-block {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mission-vision-values .text-block:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.mission-vision-values .text-block h2 {
+    color: var(--primary-color);
+    font-size: 2em;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.mission-vision-values .text-block p,
+.mission-vision-values .text-block ul {
+    font-size: 1.1em;
+    line-height: 1.7;
+    color: #555;
+}
+
+.mission-vision-values .text-block ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.mission-vision-values .text-block ul li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.team-section {
+    text-align: center;
+    padding: 40px 40px 100px;
+}
+
+.team-section h2 {
+    font-size: 2.5em;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+}
+
+.team-members {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    justify-content: center;
+}
+
+.member-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.member-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.member-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid var(--primary-color);
+}
+
+.member-card h3 {
+    font-size: 1.4em;
+    color: var(--text-color-dark);
+    margin-bottom: 5px;
+}
+
+.member-card p {
+    font-size: 0.95em;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Responsive adjustments for nosotros.css */
+@media (max-width: 768px) {
+    .about-hero h1 {
+        font-size: 2.5em;
+    }
+
+    .about-hero p {
+        font-size: 1em;
+    }
+
+    .mission-vision-values .text-block h2,
+    .team-section h2 {
+        font-size: 2em;
+    }
+
+    .mission-vision-values .container,
+    .team-members {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-hero h1 {
+        font-size: 2em;
+    }
+}

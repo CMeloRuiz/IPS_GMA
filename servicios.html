@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grupo Médicos Asociados - Servicios</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="servicios.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-top">
+            <div class="header-top-left">
+                <span style="margin-right: 20px;">
+                    <i class="fa-solid fa-phone"></i>
+                    310-409-90-29
+                </span>
+                <span>
+                    304-411-08-39
+                </span>
+            </div>
+            <div class="header-top-right">
+                <span>
+                    <i class="fa-solid fa-location-dot"></i>
+                    Sede Principal / Calle 4 #8e-84 Ubaté
+                </span>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <a href="index.html" class="logo">
+                <img src="./Images/logo.png" alt="logo">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="servicios.html" class="underline_title">Servicios</a></li>
+                    <li><a href="eventos.html">Eventos</a></li>
+                    <li><a href="profesionales.html">Profesionales</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="nav-buttons">
+                <button>
+                    <i class="fa-solid fa-user-plus"></i>
+                    Afiliate ahora
+                </button>
+                <button>
+                    <i class="fa-solid fa-calendar-days"></i>
+                    Agenda tu cita
+                </button>
+            </div>
+        </div>
+
+        <script>
+
+            document.addEventListener('DOMContentLoaded', function() {
+                const mainHeader = document.querySelector('.main-header');
+                const headerTopHeight = document.querySelector('.header-top').offsetHeight;
+
+                window.addEventListener('scroll', function() {
+                    if (window.scrollY > headerTopHeight) {
+                        mainHeader.classList.add('scrolled');
+                    } else {
+                        mainHeader.classList.remove('scrolled');
+                    }
+                });
+            });
+
+        </script>
+
+    </header>
+
+    <main class="page-content">
+        <section class="services-hero">
+            <h1>Nuestros Servicios</h1>
+            <p>Descubre la amplia gama de especialidades médicas que ofrecemos para tu bienestar.</p>
+        </section>
+
+        <section class="service-categories">
+            <div class="category-card" id="nutricion">
+                <img src="./Images/nutricion_service.jpg" alt="Nutrición y Dietética">
+                <div class="card-content">
+                    <h2>Nutrición y Dietética</h2>
+                    <p>Ofrecemos planes nutricionales personalizados para el manejo de peso, enfermedades crónicas, nutrición deportiva y más. Nuestro equipo de nutricionistas te guiará hacia hábitos alimenticios saludables.</p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Asesoramiento nutricional individual</li>
+                        <li><i class="fas fa-check-circle"></i> Planes de alimentación para condiciones específicas</li>
+                        <li><i class="fas fa-check-circle"></i> Educación en hábitos saludables</li>
+                    </ul>
+                    <a href="contacto.html" class="button-primary">Agendar Cita</a>
+                </div>
+            </div>
+
+            <div class="category-card" id="psicologia">
+                <img src="./Images/psicologia_service.jpg" alt="Psicología Clínica">
+                <div class="card-content">
+                    <h2>Psicología Clínica</h2>
+                    <p>Brindamos apoyo psicológico para diversas situaciones, incluyendo ansiedad, depresión, estrés, problemas de relación y desarrollo personal. Tu bienestar emocional es nuestra prioridad.</p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Terapia individual y de pareja</li>
+                        <li><i class="fas fa-check-circle"></i> Manejo de estrés y ansiedad</li>
+                        <li><i class="fas fa-check-circle"></i> Apoyo en duelo y crisis</li>
+                    </ul>
+                    <a href="contacto.html" class="button-primary">Agendar Cita</a>
+                </div>
+            </div>
+
+            <div class="category-card" id="pediatria">
+                <img src="./Images/pediatria_service.jpg" alt="Pediatría">
+                <div class="card-content">
+                    <h2>Pediatría</h2>
+                    <p>Cuidado integral de la salud de niños y adolescentes, desde el nacimiento hasta la adolescencia. Incluye control de crecimiento y desarrollo, vacunación y manejo de enfermedades infantiles.</p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Control de niño sano</li>
+                        <li><i class="fas fa-check-circle"></i> Esquema de vacunación</li>
+                        <li><i class="fas fa-check-circle"></i> Atención de enfermedades comunes</li>
+                    </ul>
+                    <a href="contacto.html" class="button-primary">Agendar Cita</a>
+                </div>
+            </div>
+
+            <div class="category-card" id="enfermeria">
+                <img src="./Images/enfermeria_service.jpg" alt="Enfermería">
+                <div class="card-content">
+                    <h2>Enfermería</h2>
+                    <p>Servicios de enfermería profesional para el cuidado en casa, administración de medicamentos, curaciones, toma de muestras y seguimiento de pacientes crónicos.</p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Curaciones y manejo de heridas</li>
+                        <li><i class="fas fa-check-circle"></i> Administración de inyectables</li>
+                        <li><i class="fas fa-check-circle"></i> Toma de signos vitales y muestras</li>
+                    </ul>
+                    <a href="contacto.html" class="button-primary">Agendar Cita</a>
+                </div>
+            </div>
+
+            <div class="category-card" id="ginecologia">
+                <img src="./Images/ginecologia_service.jpg" alt="ginecologia">
+                <div class="card-content">
+                    <h2>Ginecología y Obstetricia</h2>
+                    <p>Brindamos cuidado integral y especializado para la salud femenina en todas las etapas, incluyendo el seguimiento experto del embarazo y parto. Su bienestar es nuestra principal dedicación.</p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Salud femenina integral</li>
+                        <li><i class="fas fa-check-circle"></i> Acompañamiento embarazo y parto</li>
+                        <li><i class="fas fa-check-circle"></i> Cuidado sensible y experto</li>
+                    </ul>
+                    <a href="contacto.html" class="button-primary">Agendar Cita</a>
+                </div>
+            </div>
+
+            <div class="category-card" id="general">
+                <img src="./Images/medicina_general_service.jpg" alt="medicina general">
+                <div class="card-content">
+                    <h2>Medicina General</h2>
+                    <p>Ofrecemos atención médica primaria para toda la familia, enfocada en el diagnóstico, tratamiento y prevención de enfermedades comunes. Somos su aliado para una salud continua y de confianza.</p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Atención familiar completa</li>
+                        <li><i class="fas fa-check-circle"></i> Diagnóstico y tratamiento</li>
+                        <li><i class="fas fa-check-circle"></i> Prevención y seguimiento</li>
+                    </ul>
+                    <a href="contacto.html" class="button-primary">Agendar Cita</a>
+                </div>
+            </div>
+
+            <div class="category-card" id="atencion">
+                <img src="./Images/atencion_service.jpg" alt="atencion prioritaria">
+                <div class="card-content">
+                    <h2>Atención Prioritaria 24 horas</h2>
+                    <p>Disponemos de atención médica inmediata las 24 horas para condiciones de salud que requieren respuesta rápida sin ser una emergencia vital. Siempre estamos listos para cuidar de usted cuando más lo necesita.</p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Urgencias no vitales</li>
+                        <li><i class="fas fa-check-circle"></i> Disponibilidad constante</li>
+                        <li><i class="fas fa-check-circle"></i> Respuesta rápida</li>
+                    </ul>
+                    <a href="contacto.html" class="button-primary">Agendar Cita</a>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <a href="index.html" class="logo-footer">
+                    <img src="./Images/logo.png" alt="logo">
+                </a>
+                <p>Somos una institución dedicada a brindar servicios de salud de alta calidad con un enfoque humano y profesional.</p>
+            </div>
+            <div class="footer-section links">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="eventos.html">Eventos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h3>Contacto</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Calle 4 #8-84 / Ubaté</p>
+                <p><i class="fas fa-phone-alt"></i> 3104099029</p>
+                <p><i class="fas fa-phone-alt"></i> 3044110839</p>
+            </div>
+            <div class="footer-section social">
+                <h3>Síguenos</h3>
+                <div class="social-icons">
+                    <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Suscríbete para recibir notificaciones.</p>
+                    <form>
+                        <input type="email" placeholder="Tu correo electrónico">
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 Grupo Médicos Asociados. Todos los derechos reservados | Pagina Web Desarrollada por <a href="https://vortexdev.io/" target="_blank">VortexDev</a>
+        </div>
+    </footer>
+</body>
+</html>
