@@ -8,7 +8,6 @@
     color: white;
     text-align: center;
     padding: 80px 20px;
-    margin-bottom: 40px;
     position: relative;
     overflow: hidden;
 }
@@ -39,28 +38,52 @@
     margin: 0 auto;
 }
 
-.mission-vision-values {
-    margin-bottom: 40px;
-}
-
 .mission-vision-values .container {
     padding: 50px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
 }
 
 .mission-vision-values .text-block {
     background-color: #ffffff;
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+    margin-bottom: 30px;
     padding: 30px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 15px;
 }
 
-.mission-vision-values .text-block:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+.text-block-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.text-block-img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.text-block-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.image-values-container {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.image-values-container img {
+    width: 100%;
+    height: 100%;
+}
+
+.text-block-text {
+    width: 50vw;
+    text-align: justify;
 }
 
 .mission-vision-values .text-block h2 {
@@ -85,64 +108,10 @@
 .mission-vision-values .text-block ul li {
     margin-bottom: 10px;
     position: relative;
-    padding-left: 25px;
 }
 
-.team-section {
-    text-align: center;
-    padding: 40px 40px 100px;
-}
 
-.team-section h2 {
-    font-size: 2.5em;
-    color: var(--primary-color);
-    margin-bottom: 30px;
-}
-
-.team-members {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    justify-content: center;
-}
-
-.member-card {
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.member-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-
-.member-card img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 15px;
-    border: 3px solid var(--primary-color);
-}
-
-.member-card h3 {
-    font-size: 1.4em;
-    color: var(--text-color-dark);
-    margin-bottom: 5px;
-}
-
-.member-card p {
-    font-size: 0.95em;
-    color: #666;
-    line-height: 1.5;
-}
-
-/* Responsive adjustments for nosotros.css */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .about-hero h1 {
         font-size: 2.5em;
     }
@@ -151,19 +120,51 @@
         font-size: 1em;
     }
 
-    .mission-vision-values .text-block h2,
-    .team-section h2 {
-        font-size: 2em;
+    .text-block-container {
+        flex-direction: column-reverse;
     }
 
-    .mission-vision-values .container,
-    .team-members {
-        grid-template-columns: 1fr;
+    .text-block-reverse {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .image-values-container {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    .image-values-container img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .text-block-text {
+        width: 80vw;
+        padding: 30px;
     }
 }
 
-@media (max-width: 480px) {
-    .about-hero h1 {
-        font-size: 2em;
+@media (max-width:600px) {
+    .text-block-text {
+        font-size: 12px;
+        padding: 10px 20px;
+    }
+
+    .text-block-text ul li {
+        font-size: 12px;
+    }
+
+    .text-block-img,
+    .image-values-container {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 20px;
+    }
+
+    .mission-vision-values .container {
+        padding: 20px;
     }
 }

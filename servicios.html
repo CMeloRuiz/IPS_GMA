@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="servicios.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="./Images/favicon.png">
 </head>
 <body>
     <header class="main-header">
@@ -16,122 +17,78 @@
                     <i class="fa-solid fa-phone"></i>
                     310-409-90-29
                 </span>
-                <span>
-                    304-411-08-39
-                </span>
             </div>
             <div class="header-top-right">
                 <span>
                     <i class="fa-solid fa-location-dot"></i>
-                    Sede Principal / Calle 4 #8e-84 Ubaté
+                    Calle 4 #8e-84 Ubaté
                 </span>
             </div>
         </div>
         <div class="header-bottom">
-            <a href="index.html" class="logo">
-                <img src="./Images/logo.png" alt="logo">
+            <a href="./index.html" class="logo">
+                <img src="./Images/logo_original.png" alt="Logo">
             </a>
             <nav>
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="nosotros.html">Nosotros</a></li>
-                    <li><a href="servicios.html" class="underline_title">Servicios</a></li>
-                    <li><a href="eventos.html">Eventos</a></li>
-                    <li><a href="profesionales.html">Profesionales</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
+                <ul id="menu-nav">
+                    <li><a href="./nosotros.html">Nosotros</a></li>
+                    <li><a href="./servicios.html" class="underline_title">Servicios</a></li>
+                    <li><a href="./eventos.html">Eventos</a></li>
+                    <li><a href="./profesionales.html">Profesionales</a></li>
+                    <li><a href="./contacto.html">Contacto</a></li>
                 </ul>
             </nav>
-            <div class="nav-buttons">
-                <button>
-                    <i class="fa-solid fa-user-plus"></i>
+
+            <div class="header-buttons" id="header-buttons">
+                <a href="https://wa.me/573104099029" class="header-btn" style="background-color: #008c9e;" target="_blank">
+                    <i class="fa-solid fa-user-plus" style="margin-right: 7px;"></i>
                     Afiliate ahora
-                </button>
-                <button>
-                    <i class="fa-solid fa-calendar-days"></i>
+                </a>
+                <a href="https://portalpacientes.saludtools.com/home" class="header-btn" target="_blank">
+                    <i class="fa-solid fa-calendar-days" style="margin-right: 7px;"></i>
                     Agenda tu cita
-                </button>
+                </a>
+            </div>
+
+            <div class="menu-bar" onclick="toggleMenu()">
+                <i class="fa-solid fa-bars"></i>
             </div>
         </div>
-
-        <script>
-
-            document.addEventListener('DOMContentLoaded', function() {
-                const mainHeader = document.querySelector('.main-header');
-                const headerTopHeight = document.querySelector('.header-top').offsetHeight;
-
-                window.addEventListener('scroll', function() {
-                    if (window.scrollY > headerTopHeight) {
-                        mainHeader.classList.add('scrolled');
-                    } else {
-                        mainHeader.classList.remove('scrolled');
-                    }
-                });
-            });
-
-        </script>
-
+        <script src="./header.js"></script>
     </header>
 
     <main class="page-content">
         <section class="services-hero">
-            <h1>Nuestros Servicios</h1>
+            <h1>Servicios</h1>
             <p>Descubre la amplia gama de especialidades médicas que ofrecemos para tu bienestar.</p>
         </section>
 
         <section class="service-categories">
-            <div class="category-card" id="nutricion">
-                <img src="./Images/nutricion_service.jpg" alt="Nutrición y Dietética">
+            <div class="category-card" id="medicina-general">
+                <img src="./Images/medicina_general_service.jpg" alt="Medicina General">
                 <div class="card-content">
-                    <h2>Nutrición y Dietética</h2>
-                    <p>Ofrecemos planes nutricionales personalizados para el manejo de peso, enfermedades crónicas, nutrición deportiva y más. Nuestro equipo de nutricionistas te guiará hacia hábitos alimenticios saludables.</p>
+                    <h2>Medicina General</h2>
+                    <p>En nuestra área de Medicina General brindamos atención integral para todas las edades, enfocándonos en la prevención, el diagnóstico y el tratamiento de enfermedades comunes. Nuestro objetivo es acompañarte en el cuidado continuo de tu salud, con un enfoque humano y profesional.</p>
                     <ul>
-                        <li><i class="fas fa-check-circle"></i> Asesoramiento nutricional individual</li>
-                        <li><i class="fas fa-check-circle"></i> Planes de alimentación para condiciones específicas</li>
-                        <li><i class="fas fa-check-circle"></i> Educación en hábitos saludables</li>
+                        <li><i class="fas fa-check-circle"></i>Atención integral al paciente</li>
+                        <li><i class="fas fa-check-circle"></i>Diagnóstico clínico temprano</li>
+                        <li><i class="fas fa-check-circle"></i>Prevención de enfermedades</li>
                     </ul>
-                    <a href="contacto.html" class="button-primary">Agendar Cita</a>
-                </div>
-            </div>
-
-            <div class="category-card" id="psicologia">
-                <img src="./Images/psicologia_service.jpg" alt="Psicología Clínica">
-                <div class="card-content">
-                    <h2>Psicología Clínica</h2>
-                    <p>Brindamos apoyo psicológico para diversas situaciones, incluyendo ansiedad, depresión, estrés, problemas de relación y desarrollo personal. Tu bienestar emocional es nuestra prioridad.</p>
-                    <ul>
-                        <li><i class="fas fa-check-circle"></i> Terapia individual y de pareja</li>
-                        <li><i class="fas fa-check-circle"></i> Manejo de estrés y ansiedad</li>
-                        <li><i class="fas fa-check-circle"></i> Apoyo en duelo y crisis</li>
-                    </ul>
-                    <a href="contacto.html" class="button-primary">Agendar Cita</a>
+                    <a href="https://portalpacientes.saludtools.com/home" class="button-primary" target="_blank">Agendar Cita</a>
                 </div>
             </div>
 
             <div class="category-card" id="pediatria">
-                <img src="./Images/pediatria_service.jpg" alt="Pediatría">
+                <img src="./Images/pediatria_service.jpg" alt="pediatria">
                 <div class="card-content">
                     <h2>Pediatría</h2>
-                    <p>Cuidado integral de la salud de niños y adolescentes, desde el nacimiento hasta la adolescencia. Incluye control de crecimiento y desarrollo, vacunación y manejo de enfermedades infantiles.</p>
+                    <p>La salud de tus hijos es nuestra prioridad. Nuestro servicio de Pediatría está diseñado para ofrecer atención médica especializada desde el nacimiento hasta la adolescencia, garantizando un desarrollo saludable y abordando cualquier necesidad médica con sensibilidad y experiencia.</p>
                     <ul>
                         <li><i class="fas fa-check-circle"></i> Control de niño sano</li>
                         <li><i class="fas fa-check-circle"></i> Esquema de vacunación</li>
                         <li><i class="fas fa-check-circle"></i> Atención de enfermedades comunes</li>
                     </ul>
-                    <a href="contacto.html" class="button-primary">Agendar Cita</a>
-                </div>
-            </div>
-
-            <div class="category-card" id="enfermeria">
-                <img src="./Images/enfermeria_service.jpg" alt="Enfermería">
-                <div class="card-content">
-                    <h2>Enfermería</h2>
-                    <p>Servicios de enfermería profesional para el cuidado en casa, administración de medicamentos, curaciones, toma de muestras y seguimiento de pacientes crónicos.</p>
-                    <ul>
-                        <li><i class="fas fa-check-circle"></i> Curaciones y manejo de heridas</li>
-                        <li><i class="fas fa-check-circle"></i> Administración de inyectables</li>
-                        <li><i class="fas fa-check-circle"></i> Toma de signos vitales y muestras</li>
-                    </ul>
-                    <a href="contacto.html" class="button-primary">Agendar Cita</a>
+                    <a href="https://portalpacientes.saludtools.com/home" class="button-primary" target="_blank">Agendar Cita</a>
                 </div>
             </div>
 
@@ -139,52 +96,128 @@
                 <img src="./Images/ginecologia_service.jpg" alt="ginecologia">
                 <div class="card-content">
                     <h2>Ginecología y Obstetricia</h2>
-                    <p>Brindamos cuidado integral y especializado para la salud femenina en todas las etapas, incluyendo el seguimiento experto del embarazo y parto. Su bienestar es nuestra principal dedicación.</p>
+                    <p>Ofrecemos atención especializada en salud femenina en todas las etapas de la vida. Desde chequeos ginecológicos de rutina hasta el seguimiento integral del embarazo, nuestro equipo está comprometido con tu bienestar físico y emocional.</p>
                     <ul>
                         <li><i class="fas fa-check-circle"></i> Salud femenina integral</li>
                         <li><i class="fas fa-check-circle"></i> Acompañamiento embarazo y parto</li>
                         <li><i class="fas fa-check-circle"></i> Cuidado sensible y experto</li>
                     </ul>
-                    <a href="contacto.html" class="button-primary">Agendar Cita</a>
+                    <a href="https://portalpacientes.saludtools.com/home" class="button-primary" target="_blank">Agendar Cita</a>
                 </div>
             </div>
 
-            <div class="category-card" id="general">
-                <img src="./Images/medicina_general_service.jpg" alt="medicina general">
+            <div class="category-card" id="enfermeria">
+                <img src="./Images/enfermeria_service.jpg" alt="enfermeria">
                 <div class="card-content">
-                    <h2>Medicina General</h2>
-                    <p>Ofrecemos atención médica primaria para toda la familia, enfocada en el diagnóstico, tratamiento y prevención de enfermedades comunes. Somos su aliado para una salud continua y de confianza.</p>
+                    <h2>Enfermería</h2>
+                    <p>Contamos con un equipo de enfermería altamente capacitado que brinda atención personalizada, apoyo en procedimientos médicos, control de signos vitales, curaciones, administración de medicamentos y acompañamiento constante durante tu atención médica.</p>
                     <ul>
-                        <li><i class="fas fa-check-circle"></i> Atención familiar completa</li>
-                        <li><i class="fas fa-check-circle"></i> Diagnóstico y tratamiento</li>
-                        <li><i class="fas fa-check-circle"></i> Prevención y seguimiento</li>
+                        <li><i class="fas fa-check-circle"></i> Curaciones y manejo de heridas</li>
+                        <li><i class="fas fa-check-circle"></i> Administración de inyectables</li>
+                        <li><i class="fas fa-check-circle"></i> Toma de signos vitales y muestras</li>
                     </ul>
-                    <a href="contacto.html" class="button-primary">Agendar Cita</a>
+                    <a href="https://portalpacientes.saludtools.com/home" class="button-primary" target="_blank">Agendar Cita</a>
                 </div>
             </div>
 
-            <div class="category-card" id="atencion">
-                <img src="./Images/atencion_service.jpg" alt="atencion prioritaria">
+            <div class="category-card" id="ecografia">
+                <img src="./Images/ecografia_service.jpg" alt="Ecografia">
                 <div class="card-content">
-                    <h2>Atención Prioritaria 24 horas</h2>
-                    <p>Disponemos de atención médica inmediata las 24 horas para condiciones de salud que requieren respuesta rápida sin ser una emergencia vital. Siempre estamos listos para cuidar de usted cuando más lo necesita.</p>
+                    <h2>Ecografía</h2>
+                    <p>Nuestro servicio de ecografía ofrece estudios precisos y no invasivos con equipos de alta tecnología, fundamentales para el diagnóstico oportuno en diversas especialidades como obstetricia, ginecología, abdomen, tiroides, entre otros.</p>
                     <ul>
-                        <li><i class="fas fa-check-circle"></i> Urgencias no vitales</li>
-                        <li><i class="fas fa-check-circle"></i> Disponibilidad constante</li>
-                        <li><i class="fas fa-check-circle"></i> Respuesta rápida</li>
+                        <li><i class="fas fa-check-circle"></i>Técnica no invasiva</li>
+                        <li><i class="fas fa-check-circle"></i>Imágenes en tiempo real</li>
+                        <li><i class="fas fa-check-circle"></i>Apoyo al diagnóstico médico</li>
                     </ul>
-                    <a href="contacto.html" class="button-primary">Agendar Cita</a>
+                    <a href="https://portalpacientes.saludtools.com/home" class="button-primary" target="_blank">Agendar Cita</a>
+                </div>
+            </div>
+
+            <div class="category-card" id="psicologia">
+                <img src="./Images/psicologia_service.jpg" alt="psicologia">
+                <div class="card-content">
+                    <h2>Psicología</h2>
+                    <p>La salud mental es esencial para una vida plena. En nuestro servicio de Psicología te acompañamos con empatía y profesionalismo en procesos de orientación, tratamiento emocional y apoyo en situaciones de crisis, ansiedad, estrés o depresión.</p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Terapia individual y de pareja</li>
+                        <li><i class="fas fa-check-circle"></i> Manejo de estrés y ansiedad</li>
+                        <li><i class="fas fa-check-circle"></i> Apoyo en duelo y crisis</li>
+                    </ul>
+                    <a href="https://portalpacientes.saludtools.com/home" class="button-primary" target="_blank">Agendar Cita</a>
+                </div>
+            </div>
+
+            <div class="category-card" id="nutricion">
+                <img src="./Images/nutricion_service.jpg" alt="nutricion">
+                <div class="card-content">
+                    <h2>Nutrición y Dietética</h2>
+                    <p>Ofrecemos asesoría nutricional personalizada para mejorar tu salud, controlar enfermedades crónicas y alcanzar tus objetivos alimenticios. Nuestro enfoque está basado en la educación alimentaria y la promoción de hábitos saludables sostenibles.</p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Asesoramiento nutricional individual</li>
+                        <li><i class="fas fa-check-circle"></i> Planes de alimentación para condiciones específicas</li>
+                        <li><i class="fas fa-check-circle"></i> Educación en hábitos saludables</li>
+                    </ul>
+                    <a href="https://portalpacientes.saludtools.com/home" class="button-primary" target="_blank">Agendar Cita</a>
+                </div>
+            </div>
+
+            <div class="category-card" id="electrocardiograma">
+                <img src="./Images/electrocardiograma_service.jpg" alt="electrocardiograma">
+                <div class="card-content">
+                    <h2>Electrocardiograma (ECG)</h2>
+                    <p>El electrocardiograma es una herramienta clave para evaluar la actividad eléctrica del corazón. Realizamos este examen de forma rápida y segura, ayudando en la detección temprana de alteraciones cardíacas.</p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i>Registro de actividad cardíaca</li>
+                        <li><i class="fas fa-check-circle"></i>Evaluación rápida y segura</li>
+                        <li><i class="fas fa-check-circle"></i>Detección de arritmias cardíacas</li>
+                    </ul>
+                    <a href="https://portalpacientes.saludtools.com/home" class="button-primary" target="_blank">Agendar Cita</a>
+                </div>
+            </div>
+
+            <div class="category-card" id="holter">
+                <img src="./Images/holter_service.jpg" alt="holter">
+                <div class="card-content">
+                    <h2>Holter</h2>
+                    <p>El monitoreo Holter permite registrar la actividad cardíaca de forma continua durante 24 o 48 horas, facilitando el diagnóstico de arritmias u otros trastornos del ritmo cardíaco que pueden pasar desapercibidos en un ECG convencional.</p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i>Registro continuo del corazón</li>
+                        <li><i class="fas fa-check-circle"></i>Evaluación en vida diaria</li>
+                        <li><i class="fas fa-check-circle"></i>Detección de irregularidades</li>
+                    </ul>
+                    <a href="https://portalpacientes.saludtools.com/home" class="button-primary" target="_blank">Agendar Cita</a>
+                </div>
+            </div>
+
+            <div class="category-card" id="mapa">
+                <img src="./Images/mapa_service.jpg" alt="mapa">
+                <div class="card-content">
+                    <h2>MAPA 24 horas (Monitoreo Ambulatorio de Presión Arterial)</h2>
+                    <p>Este estudio permite medir la presión arterial durante un día completo en condiciones reales de vida. Es fundamental para diagnosticar hipertensión, evaluar tratamientos y prevenir complicaciones cardiovasculares.</p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i>Medición durante 24 horas</li>
+                        <li><i class="fas fa-check-circle"></i>Diagnóstico de hipertensión oculta</li>
+                        <li><i class="fas fa-check-circle"></i>Datos precisos y continuos</li>
+                    </ul>
+                    <a href="https://portalpacientes.saludtools.com/home" class="button-primary" target="_blank">Agendar Cita</a>
                 </div>
             </div>
 
         </section>
+        <script src="./services-link.js"></script>
     </main>
+
+    <!-- Boton de Whatsapp -->
+    <a href="https://wa.me/573104099029" class="whatsapp-button" target="_blank">
+        <img src="./Images/whatsapp.png" alt="whatsapp button">
+    </a>
 
     <footer>
         <div class="footer-content">
             <div class="footer-section about">
                 <a href="index.html" class="logo-footer">
-                    <img src="./Images/logo.png" alt="logo">
+                    <img src="./Images/logo_original.png" alt="logo">
                 </a>
                 <p>Somos una institución dedicada a brindar servicios de salud de alta calidad con un enfoque humano y profesional.</p>
             </div>
@@ -206,8 +239,8 @@
             <div class="footer-section social">
                 <h3>Síguenos</h3>
                 <div class="social-icons">
-                    <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/share/1FsQga1D3k/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/grupo_medicosasociados?igsh=Y212dmtpODV0ZXJ2" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                 </div>
                 <div class="newsletter">
                     <h3>Newsletter</h3>

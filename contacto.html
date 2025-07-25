@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="contacto.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="./Images/favicon.png">
 </head>
 <body>
     <header class="main-header">
@@ -16,67 +17,53 @@
                     <i class="fa-solid fa-phone"></i>
                     310-409-90-29
                 </span>
-                <span>
-                    304-411-08-39
-                </span>
             </div>
             <div class="header-top-right">
                 <span>
                     <i class="fa-solid fa-location-dot"></i>
-                    Sede Principal / Calle 4 #8e-84 Ubaté
+                    Calle 4 #8e-84 Ubaté
                 </span>
             </div>
         </div>
         <div class="header-bottom">
-            <a href="index.html" class="logo">
-                <img src="./Images/logo.png" alt="logo">
+            <a href="./index.html" class="logo">
+                <img src="./Images/logo_original.png" alt="Logo">
             </a>
             <nav>
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="nosotros.html">Nosotros</a></li>
-                    <li><a href="servicios.html">Servicios</a></li>
-                    <li><a href="eventos.html">Eventos</a></li>
-                    <li><a href="profesionales.html">Profesionales</a></li>
-                    <li><a href="contacto.html" class="underline_title">Contacto</a></li>
+                <ul id="menu-nav">
+                    <li><a href="./nosotros.html">Nosotros</a></li>
+                    <li><a href="./servicios.html">Servicios</a></li>
+                    <li><a href="./eventos.html">Eventos</a></li>
+                    <li><a href="./profesionales.html">Profesionales</a></li>
+                    <li><a href="./contacto.html" class="underline_title">Contacto</a></li>
                 </ul>
             </nav>
-            <div class="nav-buttons">
-                <button>
-                    <i class="fa-solid fa-user-plus"></i>
+
+            <div class="header-buttons" id="header-buttons">
+                <a href="https://wa.me/573104099029" class="header-btn" style="background-color: #008c9e;" target="_blank">
+                    <i class="fa-solid fa-user-plus" style="margin-right: 7px;"></i>
                     Afiliate ahora
-                </button>
-                <button>
-                    <i class="fa-solid fa-calendar-days"></i>
+                </a>
+                <a href="https://portalpacientes.saludtools.com/home" class="header-btn" target="_blank">
+                    <i class="fa-solid fa-calendar-days" style="margin-right: 7px;"></i>
                     Agenda tu cita
-                </button>
+                </a>
+            </div>
+
+            <div class="menu-bar" onclick="toggleMenu()">
+                <i class="fa-solid fa-bars"></i>
             </div>
         </div>
-
-        <script>
-
-            document.addEventListener('DOMContentLoaded', function() {
-                const mainHeader = document.querySelector('.main-header');
-                const headerTopHeight = document.querySelector('.header-top').offsetHeight;
-
-                window.addEventListener('scroll', function() {
-                    if (window.scrollY > headerTopHeight) {
-                        mainHeader.classList.add('scrolled');
-                    } else {
-                        mainHeader.classList.remove('scrolled');
-                    }
-                });
-            });
-
-        </script>
-
+        <script src="./header.js"></script>
     </header>
 
-    <main class="page-content">
+    <main class="page-content contact-main">
         <section class="contact-hero">
             <h1>Contáctanos</h1>
             <p>Estamos aquí para escucharte y resolver tus inquietudes.</p>
         </section>
+
+        <div class="middle-triangle"></div>
 
         <section class="contact-details-form">
             <div class="contact-info-block">
@@ -91,22 +78,35 @@
                 </div>
                 <div class="info-item">
                     <i class="fas fa-envelope"></i>
-                    <p><strong>Email:</strong> info@grupomedicosasociados.com (ejemplo)</p>
+                    <p><strong>Email:</strong> pqrs@grupomedicosasociados.com</p>
                 </div>
                 <div class="info-item">
                     <i class="far fa-clock"></i>
                     <p><strong>Horario de Atención:</strong> Lunes a Domingo: 8:00 AM - 7:00 PM</p>
                 </div>
                 <div class="social-links">
-                    <h3>Síguenos en Redes</h3>
-                    <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <h3>Contactanos en:</h3>
+                    <a href="https://www.facebook.com/share/1FsQga1D3k/" target="_blank" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/grupo_medicosasociados?igsh=Y212dmtpODV0ZXJ2" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/573104099029" target="_blank" aria-label="Whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
                 </div>
             </div>
 
             <div class="contact-form-block">
                 <h2>Envíanos un Mensaje</h2>
-                <form class="contact-form">
+
+                <form 
+                    class="contact-form" 
+                    autocomplete="off" 
+                    action="https://formsubmit.co/pqrs@grupomedicosasociados.com" 
+                    method="POST"
+                >
                     <div class="form-group">
                         <label for="name">Nombre Completo</label>
                         <input type="text" id="name" name="name" required>
@@ -129,6 +129,7 @@
                     </div>
                     <button type="submit" class="button-primary">Enviar Mensaje</button>
                 </form>
+
             </div>
         </section>
 
@@ -140,11 +141,16 @@
         </section>
     </main>
 
+    <!-- Boton de Whatsapp -->
+    <a href="https://wa.me/573104099029" class="whatsapp-button" target="_blank">
+        <img src="./Images/whatsapp.png" alt="whatsapp button">
+    </a>
+
     <footer>
         <div class="footer-content">
             <div class="footer-section about">
                 <a href="index.html" class="logo-footer">
-                    <img src="./Images/logo.png" alt="logo">
+                    <img src="./Images/logo_original.png" alt="logo">
                 </a>
                 <p>Somos una institución dedicada a brindar servicios de salud de alta calidad con un enfoque humano y profesional.</p>
             </div>
@@ -166,8 +172,8 @@
             <div class="footer-section social">
                 <h3>Síguenos</h3>
                 <div class="social-icons">
-                    <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/share/1FsQga1D3k/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/grupo_medicosasociados?igsh=Y212dmtpODV0ZXJ2" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                 </div>
                 <div class="newsletter">
                     <h3>Newsletter</h3>

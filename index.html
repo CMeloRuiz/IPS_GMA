@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grupo Médicos Asociados - Inicio</title>
+    <title>Grupo Médicos Asociados</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="./Images/favicon.png">
 </head>
 <body>
     <header class="main-header">
@@ -16,86 +17,70 @@
                     <i class="fa-solid fa-phone"></i>
                     310-409-90-29
                 </span>
-                <span>
-                    304-411-08-39
-                </span>
             </div>
             <div class="header-top-right">
                 <span>
                     <i class="fa-solid fa-location-dot"></i>
-                    Sede Principal / Calle 4 #8e-84 Ubaté
+                    Calle 4 #8e-84 Ubaté
                 </span>
             </div>
         </div>
         <div class="header-bottom">
-            <a href="index.html" class="logo">
-                <img src="./Images/logo.png" alt="logo">
+            <a href="./index.html" class="logo">
+                <img src="./Images/logo_original.png" alt="Logo">
             </a>
             <nav>
-                <ul>
-                    <li><a href="index.html" class="underline_title">Inicio</a></li>
-                    <li><a href="nosotros.html">Nosotros</a></li>
-                    <li><a href="servicios.html">Servicios</a></li>
-                    <li><a href="eventos.html">Eventos</a></li>
-                    <li><a href="profesionales.html">Profesionales</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
+                <ul id="menu-nav">
+                    <li><a href="./nosotros.html">Nosotros</a></li>
+                    <li><a href="./servicios.html">Servicios</a></li>
+                    <li><a href="./eventos.html">Eventos</a></li>
+                    <li><a href="./profesionales.html">Profesionales</a></li>
+                    <li><a href="./contacto.html">Contacto</a></li>
                 </ul>
             </nav>
-            <div class="nav-buttons">
-                <button>
-                    <i class="fa-solid fa-user-plus"></i>
+
+            <div class="header-buttons" id="header-buttons">
+                <a href="https://wa.me/573104099029" class="header-btn" style="background-color: #008c9e;" target="_blank">
+                    <i class="fa-solid fa-user-plus" style="margin-right: 7px;"></i>
                     Afiliate ahora
-                </button>
-                <button>
-                    <i class="fa-solid fa-calendar-days"></i>
+                </a>
+                <a href="https://portalpacientes.saludtools.com/home" class="header-btn" target="_blank">
+                    <i class="fa-solid fa-calendar-days" style="margin-right: 7px;"></i>
                     Agenda tu cita
-                </button>
+                </a>
+            </div>
+
+            <div class="menu-bar" onclick="toggleMenu()">
+                <i class="fa-solid fa-bars"></i>
             </div>
         </div>
-
-        <script>
-
-            document.addEventListener('DOMContentLoaded', function() {
-                const mainHeader = document.querySelector('.main-header');
-                const headerTopHeight = document.querySelector('.header-top').offsetHeight;
-
-                window.addEventListener('scroll', function() {
-                    if (window.scrollY > headerTopHeight) {
-                        mainHeader.classList.add('scrolled');
-                    } else {
-                        mainHeader.classList.remove('scrolled');
-                    }
-                });
-            });
-
-        </script>
-
+        <script src="./header.js"></script>
     </header>
 
     <main class="page-content">
         <section class="hero-slider">
             <div class="slider-container">
                 <div class="slide active">
-                    <img src="./Images/nutricionista.jpg" alt="Nutrición y Dietética">
+                    <img src="./Images/medicina_general_service.jpg" alt="medicina general">
                     <div class="overlay"></div>
                     <div class="slide-content">
-                        <h2>Nutrición y Dietética</h2>
+                        <h2>Medicina General</h2>
                     </div>
                 </div>
 
                 <div class="slide">
-                    <img src="./Images/psicologia.jpg" alt="Psicología Clínica">
-                    <div class="overlay"></div>
-                    <div class="slide-content">
-                        <h2>Psicología Clínica</h2>
-                    </div>
-                </div>
-
-                <div class="slide">
-                    <img src="./Images/pediatria.jpg" alt="Pediatría">
+                    <img src="./Images/pediatria.jpg" alt="pediatria">
                     <div class="overlay"></div>
                     <div class="slide-content">
                         <h2>Pediatría</h2>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="./Images/ginecologia_service.jpg" alt="ginecologia">
+                    <div class="overlay"></div>
+                    <div class="slide-content">
+                        <h2>Ginecología</h2>
                     </div>
                 </div>
 
@@ -106,6 +91,54 @@
                         <h2>Enfermería</h2>
                     </div>
                 </div>
+
+                <div class="slide">
+                    <img src="./Images/ecografia_service.jpg" alt="ecografia">
+                    <div class="overlay"></div>
+                    <div class="slide-content">
+                        <h2>Ecografía</h2>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="./Images/psicologia.jpg" alt="psicologia">
+                    <div class="overlay"></div>
+                    <div class="slide-content">
+                        <h2>Psicología</h2>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="./Images/nutricionista.jpg" alt="nutricion">
+                    <div class="overlay"></div>
+                    <div class="slide-content">
+                        <h2>Nutrición y Dietética</h2>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="./Images/electrocardiograma.jpg" alt="electrocardiograma">
+                    <div class="overlay"></div>
+                    <div class="slide-content">
+                        <h2>Electrocardiograma</h2>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="./Images/holter_service.jpg" alt="holter">
+                    <div class="overlay"></div>
+                    <div class="slide-content">
+                        <h2>Holter</h2>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="./Images/mapa.jpg" alt="mapa">
+                    <div class="overlay"></div>
+                    <div class="slide-content">
+                        <h2>Monitoreo Ambulatorio de Presión Arterial</h2>
+                    </div>
+                </div>
             </div>
 
             <div class="slider-dots">
@@ -113,6 +146,43 @@
                 <span class="hero-dot" data-slide-index="1"></span>
                 <span class="hero-dot" data-slide-index="2"></span>
                 <span class="hero-dot" data-slide-index="3"></span>
+                <span class="hero-dot" data-slide-index="4"></span>
+                <span class="hero-dot" data-slide-index="5"></span>
+                <span class="hero-dot" data-slide-index="6"></span>
+                <span class="hero-dot" data-slide-index="7"></span>
+                <span class="hero-dot" data-slide-index="8"></span>
+                <span class="hero-dot" data-slide-index="9"></span>
+            </div>
+        </section>
+
+        <!-- Seccion Corta Nosotros -->
+
+        <section class="about-us-short">
+            <div class="container">
+                <div class="content-wrapper">
+                    <div class="image-section">
+                        <div class="image-container">
+                            <div class="decorative-element small"></div>
+                            <div class="decorative-element large"></div>
+                            <div class="circle-frame">
+                                <img src="./Images/sede_principal.png" alt="Grupo Médicos Asociados - Edificio" class="building-image">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="text-section">
+                        <div class="years-badge">
+                            <div class="years-number">1+</div>
+                            <div class="years-text">años</div>
+                        </div>
+                        
+                        <h2 class="main-title">Grupo Médicos<br>Asociados S.A.S.</h2>
+                       
+                        <p class="description">
+                            En Grupo Médicos Asociados, nos enorgullece ser una IPS comprometida con el bienestar integral de la comunidad en general. Con más de un año de servicio, ofrecemos atención médica oportuna, humanizada y de calidad a toda la población, sin distinción. Contamos con un equipo multidisciplinario de profesionales altamente capacitados.<br><br>Nos caracterizamos por trabajar con un profundo sentido de ética, compromiso, responsabilidad y eficiencia, fomentando el trabajo en equipo y garantizando siempre un trato equitativo, respetuoso y digno para cada uno de nuestros pacientes.<br><br>En Grupo Médicos Asociados, más que brindar servicios de salud, construimos confianza, promovemos el autocuidado y acompañamos a nuestros usuarios en cada etapa de su vida. <span class="highlight">Tu salud, nuestra prioridad.</span>
+                        </p>
+                    </div>
+                </div>
             </div>
         </section>
         
@@ -122,78 +192,66 @@
                 <div class="carousel-container">
                     <div class="carousel-track">
                         <div class="service-card">
-                            <img src="./Images/nutricion_service.jpg" alt="Icono Nutrición y Dietética">
-                            <h3>Nutrición y Dietética</h3>
-                            <a href="./servicios.html" class="more-info-btn">Más Información</a>
-                        </div>
-
-                        <div class="service-card">
-                            <img src="./Images/psicologia_service.jpg" alt="Icono Psicología Clínica">
-                            <h3>Psicología Clínica</h3>
-                            <a href="./servicios.html" class="more-info-btn">Más Información</a>
-                        </div>
-
-                        <div class="service-card">
-                            <img src="./Images/pediatria_service.jpg" alt="Icono Pediatría">
-                            <h3>Pediatría</h3>
-                            <a href="./servicios.html" class="more-info-btn">Más Información</a>
-                        </div>
-
-                        <div class="service-card">
-                            <img src="./Images/enfermeria_service.jpg" alt="Icono Enfermería">
-                            <h3>Enfermería</h3>
-                            <a href="./servicios.html" class="more-info-btn">Más Información</a>
-                        </div>
-
-                        <div class="service-card">
-                            <img src="./Images/ginecologia_service.jpg" alt="Icono Ginecología y Obstetricia">
-                            <h3>Ginecología y Obstetricia</h3>
-                            <a href="./servicios.html" class="more-info-btn">Más Información</a>
-                        </div>
-
-                        <div class="service-card">
-                            <img src="./Images/medicina_general_service.jpg" alt="Icono Medicina General">
+                            <img src="./Images/medicina_general_service.jpg" alt="medicina general">
                             <h3>Medicina General</h3>
-                            <a href="./servicios.html" class="more-info-btn">Más Información</a>
+                            <a href="./servicios.html#medicina-general" class="more-info-btn">Más Información</a>
                         </div>
 
                         <div class="service-card">
-                            <img src="./Images/atencion_service.jpg" alt="Icono Atención Prioritaria 24 horas">
-                            <h3>Atención Prioritaria 24 horas</h3>
-                            <a href="./servicios.html" class="more-info-btn">Más Información</a>
+                            <img src="./Images/pediatria_service.jpg" alt="pediatria">
+                            <h3>Pediatría</h3>
+                            <a href="./servicios.html#pediatria" class="more-info-btn">Más Información</a>
                         </div>
+
+                        <div class="service-card">
+                            <img src="./Images/ginecologia_service.jpg" alt="ginecologia">
+                            <h3>Ginecología y Obstetricia</h3>
+                            <a href="./servicios.html#ginecologia" class="more-info-btn">Más Información</a>
+                        </div>
+
+                        <div class="service-card">
+                            <img src="./Images/enfermeria_service.jpg" alt="enfermería">
+                            <h3>Enfermería</h3>
+                            <a href="./servicios.html#enfermeria" class="more-info-btn">Más Información</a>
+                        </div>
+
+                        <div class="service-card">
+                            <img src="./Images/ecografia_service.jpg" alt="ecografia">
+                            <h3>Ecografía</h3>
+                            <a href="./servicios.html#ecografia" class="more-info-btn">Más Información</a>
+                        </div>
+
+                        <div class="service-card">
+                            <img src="./Images/psicologia_service.jpg" alt="psicologia">
+                            <h3>Psicología</h3>
+                            <a href="./servicios.html#psicologia" class="more-info-btn">Más Información</a>
+                        </div>
+
+                        <div class="service-card">
+                            <img src="./Images/nutricion_service.jpg" alt="nutricion">
+                            <h3>Nutrición y Dietética</h3>
+                            <a href="./servicios.html#nutricion" class="more-info-btn">Más Información</a>
+                        </div>
+
+                        <div class="service-card">
+                            <img src="./Images/electrocardiograma_service.jpg" alt="electrocardiograma">
+                            <h3>Electrocardiograma (ECG)</h3>
+                            <a href="./servicios.html#electrocardiograma" class="more-info-btn">Más Información</a>
+                        </div>
+                        <div class="service-card">
+                            <img src="./Images/holter_service.jpg" alt="holter">
+                            <h3>Holter</h3>
+                            <a href="./servicios.html#holter" class="more-info-btn">Más Información</a>
+                        </div>
+                        <div class="service-card">
+                            <img src="./Images/mapa_service.jpg" alt="MAPA">
+                            <h3>Monitoreo Ambulatorio de Presión Arterial</h3>
+                            <a href="./servicios.html#mapa" class="more-info-btn">Más Información</a>
+                        </div>
+
                     </div>
                 </div>
                 <div class="carousel-dots"></div>
-            </div>
-        </section>
-
-        <section class="about-us-short">
-            <div class="container">
-                <div class="content-wrapper">
-                    <div class="image-section">
-                        <div class="image-container">
-                            <div class="decorative-element large"></div>
-                            <div class="decorative-element small"></div>
-                            <div class="circle-frame">
-                                <img src="./Images/sede_principal.png" alt="Grupo Médicos Asociados - Edificio" class="building-image">
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="text-section">
-                        <div class="years-badge">
-                            <div class="years-number">15+</div>
-                            <div class="years-text">años</div>
-                        </div>
-                        
-                        <h2 class="main-title">Grupo Médicos Asociados S.A.S.</h2>
-                       
-                        <p class="description">
-                            Somos una <span class="highlight">institución prestadora de servicios de salud privada</span> enfocada en la calidad de atención de nuestros usuarios. Nuestro compromiso es atender de manera oportuna con honestidad y equidad, actuamos de manera intachable, por ello somos fieles a nuestros principios éticos. Nuestro plan de funcionamiento es estar en los <span class="highlight">avances tecnológicos y científicos</span> que nos permitan un diagnóstico oportuno.
-                        </p>
-                    </div>
-                </div>
             </div>
         </section>
 
@@ -208,8 +266,7 @@
                             <img src="./Images/phone.png" alt="">
                         </div>
                         <h3>Teléfonos</h3>
-                        <p>3104099029</p>
-                        <p>3044110839</p>
+                        <p>3104099029 - 3044110839</p>
                     </div>
                     
                     <div class="contact-card">
@@ -225,11 +282,16 @@
         </section>
     </main>
 
+    <!-- Boton de Whatsapp -->
+    <a href="https://wa.me/573104099029" class="whatsapp-button" target="_blank">
+        <img src="./Images/whatsapp.png" alt="whatsapp button">
+    </a>
+
     <footer>
         <div class="footer-content">
             <div class="footer-section about">
                 <a href="index.html" class="logo-footer">
-                    <img src="./Images/logo.png" alt="logo">
+                    <img src="./Images/logo_original.png" alt="logo">
                 </a>
                 <p>Somos una institución dedicada a brindar servicios de salud de alta calidad con un enfoque humano y profesional.</p>
             </div>
@@ -251,8 +313,8 @@
             <div class="footer-section social">
                 <h3>Síguenos</h3>
                 <div class="social-icons">
-                    <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/share/1FsQga1D3k/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/grupo_medicosasociados?igsh=Y212dmtpODV0ZXJ2" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                 </div>
                 <div class="newsletter">
                     <h3>Newsletter</h3>
@@ -270,7 +332,6 @@
     </footer>
 
     <script src="./script.js"></script>
-    <script src="./index.js"></script>
     <script src="./services.js"></script>
 </body>
 </html>

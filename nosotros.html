@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="nosotros.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="./Images/favicon.png">
 </head>
 <body>
     <header class="main-header">
@@ -16,60 +17,44 @@
                     <i class="fa-solid fa-phone"></i>
                     310-409-90-29
                 </span>
-                <span>
-                    304-411-08-39
-                </span>
             </div>
             <div class="header-top-right">
                 <span>
                     <i class="fa-solid fa-location-dot"></i>
-                    Sede Principal / Calle 4 #8e-84 Ubaté
+                    Calle 4 #8e-84 Ubaté
                 </span>
             </div>
         </div>
         <div class="header-bottom">
-            <a href="index.html" class="logo">
-                <img src="./Images/logo.png" alt="logo">
+            <a href="./index.html" class="logo">
+                <img src="./Images/logo_original.png" alt="Logo">
             </a>
             <nav>
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="nosotros.html" class="underline_title">Nosotros</a></li>
-                    <li><a href="servicios.html">Servicios</a></li>
-                    <li><a href="eventos.html">Eventos</a></li>
-                    <li><a href="profesionales.html">Profesionales</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
+                <ul id="menu-nav">
+                    <li><a href="./nosotros.html" class="underline_title">Nosotros</a></li>
+                    <li><a href="./servicios.html">Servicios</a></li>
+                    <li><a href="./eventos.html">Eventos</a></li>
+                    <li><a href="./profesionales.html">Profesionales</a></li>
+                    <li><a href="./contacto.html">Contacto</a></li>
                 </ul>
             </nav>
-            <div class="nav-buttons">
-                <button>
-                    <i class="fa-solid fa-user-plus"></i>
+
+            <div class="header-buttons" id="header-buttons">
+                <a href="https://wa.me/573104099029" class="header-btn" style="background-color: #008c9e;" target="_blank">
+                    <i class="fa-solid fa-user-plus" style="margin-right: 7px;"></i>
                     Afiliate ahora
-                </button>
-                <button>
-                    <i class="fa-solid fa-calendar-days"></i>
+                </a>
+                <a href="https://portalpacientes.saludtools.com/home" class="header-btn" target="_blank">
+                    <i class="fa-solid fa-calendar-days" style="margin-right: 7px;"></i>
                     Agenda tu cita
-                </button>
+                </a>
+            </div>
+
+            <div class="menu-bar" onclick="toggleMenu()">
+                <i class="fa-solid fa-bars"></i>
             </div>
         </div>
-
-        <script>
-
-            document.addEventListener('DOMContentLoaded', function() {
-                const mainHeader = document.querySelector('.main-header');
-                const headerTopHeight = document.querySelector('.header-top').offsetHeight;
-
-                window.addEventListener('scroll', function() {
-                    if (window.scrollY > headerTopHeight) {
-                        mainHeader.classList.add('scrolled');
-                    } else {
-                        mainHeader.classList.remove('scrolled');
-                    }
-                });
-            });
-
-        </script>
-
+        <script src="./header.js"></script>
     </header>
 
     <main class="page-content about-us-page">
@@ -81,56 +66,61 @@
         <section class="mission-vision-values">
             <div class="container">
                 <div class="text-block">
-                    <h2>Nuestra Misión</h2>
-                    <p>Brindar a toda la comunidad la mejor atención médica basada en la idoneidad, eficiencia y calidad, utilizando procesos y métodos de trabajo que optimicen el desempeño con la mejor utilización de los recursos.</p>
+                    <div class="text-block-container text-block-reverse">
+                        <div class="text-block-img">
+                            <img src="./Images/mision.jpg" alt="mision">
+                        </div>
+                        <div class="text-block-text">
+                            <h2>Nuestra Misión</h2>
+                            <p>Satisfacer de manera eficaz y eficiente las necesidades de salud de la comunidad, brindando atención médica de alta calidad, fundamentada en la evidencia científica y guiada por sólidos principios éticos. Nos comprometemos a acompañar integralmente al paciente y su familia, promoviendo la educación en salud y el desarrollo de hábitos de vida saludables. Nuestro enfoque se basa en la mejora continua, garantizando la actualización permanente de conocimientos, procesos, tecnologías y estructuras, con el fin de mantenernos a la vanguardia de los avances científicos.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="text-block">
-                    <h2>Nuestra Visión</h2>
-                    <p>Crear y sostener un sistema médico de vanguardia que sea un espacio de crecimiento y desarrollo del conocimiento, abierto a la excelencia médica y asistencial, que permita un servicio de salud en el que el paciente y su familia sean el centro de atención.</p>
-                </div>
-                <div class="text-block">
-                    <h2>Nuestros Valores</h2>
-                    <ul>
-                        <li><strong>Calidad:</strong> Nos esforzamos por la excelencia en cada servicio.</li>
-                        <li><strong>Humanidad:</strong> Tratamos a cada paciente con respeto y empatía.</li>
-                        <li><strong>Compromiso:</strong> Dedicación total a la salud y bienestar de nuestros pacientes.</li>
-                        <li><strong>Innovación:</strong> Adoptamos las últimas tecnologías para un diagnóstico preciso.</li>
-                        <li><strong>Integridad:</strong> Actuamos con honestidad y transparencia en todas nuestras operaciones.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
 
-        <section class="team-section">
-            <h2>Nuestro Equipo</h2>
-            <div class="team-members">
-                <div class="member-card">
-                    <img src="./Images/doctor_1.png" alt="Dr. Juan Pérez">
-                    <h3>Dr. Juan Pérez</h3>
-                    <p>Director Médico</p>
-                    <p>Especialista en Medicina Interna con más de 20 años de experiencia.</p>
+                <div class="text-block">
+                    <div class="text-block-container">
+                        <div class="text-block-text">
+                            <h2>Nuestra Visión</h2>
+                            <p>Consolidarnos como un sistema integral de salud privada que promueva el crecimiento personal y profesional de nuestro equipo humano, centrado en la excelencia y la calidez en la atención al paciente y su entorno familiar. Aspiramos a ser una organización modelo en gestión y asistencia en el cuidado de la salud, reconocida por su compromiso con la calidad, la ética y la innovación.</p>
+                        </div>
+                        <div class="text-block-img">
+                            <img src="./Images/vision.jpg" alt="vision">
+                        </div>
+                    </div>
                 </div>
-                <div class="member-card">
-                    <img src="./Images/doctor_2.png" alt="Lic. Ana García">
-                    <h3>Lic. Ana García</h3>
-                    <p>Jefa de Enfermería</p>
-                    <p>Líder en el cuidado de pacientes y gestión de equipos de enfermería.</p>
-                </div>
-                <div class="member-card">
-                    <img src="./Images/doctor_2.png" alt="Dra. Sofía López">
-                    <h3>Dra. Sofía López</h3>
-                    <p>Coordinadora de Nutrición</p>
-                    <p>Experta en planes nutricionales personalizados y dietoterapia.</p>
+
+                <div class="text-block">
+                    <div class="text-block-container text-block-reverse">
+                        <div class="text-block-img image-values-container">
+                            <img src="./Images/valores.jpg" alt="valores">
+                        </div>
+                        <div class="text-block-text">
+                            <h2>Nuestros Valores</h2>
+                            <ul style="font-size: 14px;">
+                                <li><strong><i class="fas fa-check-circle" style="color: #19a349; margin-right: 10px;"></i>Trabajo en equipo:</strong> Fomentamos la colaboración activa entre todos los miembros de la organización, respetando las diferencias, fortaleciendo las relaciones interpersonales y priorizando el éxito colectivo sobre el individual.</li>
+                                <li><strong><i class="fas fa-check-circle" style="color: #19a349; margin-right: 10px;"></i>Equidad:</strong> Ofrecemos servicios de salud sin distinción de edad, género, condición social, ideología, credo o estado de salud, asegurando un trato justo e inclusivo para todos.</li>
+                                <li><strong><i class="fas fa-check-circle" style="color: #19a349; margin-right: 10px;"></i>Responsabilidad:</strong> Ejecutamos nuestras labores con enfoque en los resultados, asumiendo un rol activo tanto dentro de la organización como en nuestro entorno social.</li>
+                                <li><strong><i class="fas fa-check-circle" style="color: #19a349; margin-right: 10px;"></i>Ética:</strong> Actuamos con honestidad, transparencia y respeto, velando siempre por el bienestar y la dignidad de quienes confían en nosotros.</li>
+                                <li><strong><i class="fas fa-check-circle" style="color: #19a349; margin-right: 10px;"></i>Compromiso:</strong> Desarrollamos nuestras funciones con dedicación, orientados a brindar atención humanizada y de calidad al paciente y su familia.</li>
+                                <li><strong><i class="fas fa-check-circle" style="color: #19a349; margin-right: 10px;"></i>Eficiencia:</strong> Alcanzamos nuestros objetivos mediante procesos optimizados que garantizan el uso racional de los recursos y una gestión efectiva.</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
+    <!-- Boton de Whatsapp -->
+    <a href="https://wa.me/573104099029" class="whatsapp-button" target="_blank">
+        <img src="./Images/whatsapp.png" alt="whatsapp button">
+    </a>
+
     <footer>
         <div class="footer-content">
             <div class="footer-section about">
                 <a href="index.html" class="logo-footer">
-                    <img src="./Images/logo.png" alt="logo">
+                    <img src="./Images/logo_original.png" alt="logo">
                 </a>
                 <p>Somos una institución dedicada a brindar servicios de salud de alta calidad con un enfoque humano y profesional.</p>
             </div>
@@ -152,8 +142,8 @@
             <div class="footer-section social">
                 <h3>Síguenos</h3>
                 <div class="social-icons">
-                    <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/share/1FsQga1D3k/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/grupo_medicosasociados?igsh=Y212dmtpODV0ZXJ2" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                 </div>
                 <div class="newsletter">
                     <h3>Newsletter</h3>

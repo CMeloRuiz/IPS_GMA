@@ -1,18 +1,18 @@
-/* profesionales.css */
 
-main {
+/* main {
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
+} */
+
+.profesionales-main {
+    background-color: #8891a3;
 }
 
 .professionals-hero {
-    background: url('https://via.placeholder.com/1200x300?text=Nuestros+Profesionales') no-repeat center center/cover;
     color: white;
     text-align: center;
     padding: 80px 20px;
-    border-radius: 10px;
-    margin-bottom: 40px;
     position: relative;
     overflow: hidden;
 }
@@ -24,8 +24,7 @@ main {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
+    background: linear-gradient(to right, #0d2a6a, #3a445a);
 }
 
 .professionals-hero h1 {
@@ -44,9 +43,64 @@ main {
     margin: 0 auto;
 }
 
-.professional-directory {
+.team-section {
     text-align: center;
-    margin-bottom: 40px;
+    padding: 40px 40px 100px;
+}
+
+.team-section h2 {
+    font-size: 2.5em;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+}
+
+.team-members {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    justify-content: center;
+}
+
+.member-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.member-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.member-card img {
+    width: 200px;
+    height: 200px;
+    background-color: #a4b1be;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid var(--primary-color);
+}
+
+.member-card h3 {
+    font-size: 1.4em;
+    color: var(--text-color-dark);
+    margin-bottom: 5px;
+}
+
+.member-card p {
+    font-size: 0.95em;
+    color: #666;
+    line-height: 1.5;
+}
+
+.professional-directory {
+    background-color: #8891a3;
+    text-align: center;
+    padding: 50px;
 }
 
 .professional-directory h2 {
@@ -71,6 +125,8 @@ main {
     font-size: 1em;
     width: 100%;
     max-width: 300px;
+    color: #383838;
+    outline: none;
 }
 
 .professional-grid {
@@ -89,10 +145,10 @@ main {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.professional-card:hover {
+/* .professional-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
+} */
 
 .professional-card img {
     width: 150px;
@@ -124,22 +180,19 @@ main {
 }
 
 .button-secondary {
-    background-color: #f0f0f0;
-    color: var(--primary-color);
+    background-color: #2a5b7c;
+    color: #eee;
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
-    font-weight: bold;
-    border: 1px solid var(--primary-color);
+    font-weight: 500;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .button-secondary:hover {
-    background-color: var(--primary-color);
-    color: white;
+    background-color: #5b5e64;
 }
 
-/* Responsive adjustments for profesionales.css */
 @media (max-width: 768px) {
     .professionals-hero h1 {
         font-size: 2.5em;

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="profesionales.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="./Images/favicon.png">
 </head>
 <body>
     <header class="main-header">
@@ -16,66 +17,74 @@
                     <i class="fa-solid fa-phone"></i>
                     310-409-90-29
                 </span>
-                <span>
-                    304-411-08-39
-                </span>
             </div>
             <div class="header-top-right">
                 <span>
                     <i class="fa-solid fa-location-dot"></i>
-                    Sede Principal / Calle 4 #8e-84 Ubaté
+                    Calle 4 #8e-84 Ubaté
                 </span>
             </div>
         </div>
         <div class="header-bottom">
-            <a href="index.html" class="logo">
-                <img src="./Images/logo.png" alt="logo">
+            <a href="./index.html" class="logo">
+                <img src="./Images/logo_original.png" alt="Logo">
             </a>
             <nav>
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="nosotros.html">Nosotros</a></li>
-                    <li><a href="servicios.html">Servicios</a></li>
-                    <li><a href="eventos.html">Eventos</a></li>
-                    <li><a href="profesionales.html" class="underline_title">Profesionales</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
+                <ul id="menu-nav">
+                    <li><a href="./nosotros.html">Nosotros</a></li>
+                    <li><a href="./servicios.html">Servicios</a></li>
+                    <li><a href="./eventos.html">Eventos</a></li>
+                    <li><a href="./profesionales.html" class="underline_title">Profesionales</a></li>
+                    <li><a href="./contacto.html">Contacto</a></li>
                 </ul>
             </nav>
-            <div class="nav-buttons">
-                <button>
-                    <i class="fa-solid fa-user-plus"></i>
+
+            <div class="header-buttons" id="header-buttons">
+                <a href="https://wa.me/573104099029" class="header-btn" style="background-color: #008c9e;" target="_blank">
+                    <i class="fa-solid fa-user-plus" style="margin-right: 7px;"></i>
                     Afiliate ahora
-                </button>
-                <button>
-                    <i class="fa-solid fa-calendar-days"></i>
+                </a>
+                <a href="https://portalpacientes.saludtools.com/home" class="header-btn" target="_blank">
+                    <i class="fa-solid fa-calendar-days" style="margin-right: 7px;"></i>
                     Agenda tu cita
-                </button>
+                </a>
+            </div>
+
+            <div class="menu-bar" onclick="toggleMenu()">
+                <i class="fa-solid fa-bars"></i>
             </div>
         </div>
-
-        <script>
-
-            document.addEventListener('DOMContentLoaded', function() {
-                const mainHeader = document.querySelector('.main-header');
-                const headerTopHeight = document.querySelector('.header-top').offsetHeight;
-
-                window.addEventListener('scroll', function() {
-                    if (window.scrollY > headerTopHeight) {
-                        mainHeader.classList.add('scrolled');
-                    } else {
-                        mainHeader.classList.remove('scrolled');
-                    }
-                });
-            });
-
-        </script>
-
+        <script src="./header.js"></script>
     </header>
 
-    <main class="page-content">
+    <main class="page-content profesionales-main">
         <section class="professionals-hero">
-            <h1>Nuestros Profesionales</h1>
+            <h1>Profesionales</h1>
             <p>Conoce al equipo de expertos que cuida de tu salud.</p>
+        </section>
+
+        <section class="team-section">
+            <h2>Nuestro Equipo</h2>
+            <div class="team-members">
+                <div class="member-card">
+                    <img src="./Images/doctor_1.png" alt="Dr. Juan Pérez">
+                    <h3>Dr. Juan Pérez</h3>
+                    <p>Director Médico</p>
+                    <p>Especialista en Medicina Interna con más de 20 años de experiencia.</p>
+                </div>
+                <div class="member-card">
+                    <img src="./Images/doctor_2.png" alt="Lic. Ana García">
+                    <h3>Lic. Ana García</h3>
+                    <p>Jefa de Enfermería</p>
+                    <p>Líder en el cuidado de pacientes y gestión de equipos de enfermería.</p>
+                </div>
+                <div class="member-card">
+                    <img src="./Images/doctor_2.png" alt="Dra. Sofía López">
+                    <h3>Dra. Sofía López</h3>
+                    <p>Coordinadora de Nutrición</p>
+                    <p>Experta en planes nutricionales personalizados y dietoterapia.</p>
+                </div>
+            </div>
         </section>
 
         <section class="professional-directory">
@@ -84,50 +93,56 @@
                 <input type="text" id="searchBar" placeholder="Buscar por nombre o especialidad...">
                 <select id="specialtyFilter">
                     <option value="">Todas las Especialidades</option>
-                    <option value="Nutrición y Dietética">Nutrición y Dietética</option>
-                    <option value="Psicología Clínica">Psicología Clínica</option>
+                    <option value="Medicina general">Medicina general</option>
                     <option value="Pediatría">Pediatría</option>
+                    <option value="Ginecologia">Ginecologia</option>
                     <option value="Enfermería">Enfermería</option>
+                    <option value="Ecografia">Ecografia</option>
+                    <option value="Psicología Clínica">Psicología Clínica</option> 
+                    <option value="Nutrición y Dietética">Nutrición y Dietética</option>
+                    <option value="Electrocardiograma">Electrocardiograma</option>
+                    <option value="Holter">Holter</option>
+                    <option value="MAPA">MAPA</option>
                     </select>
             </div>
             <div class="professional-grid" id="professionalGrid">
                 <div class="professional-card" data-specialty="Nutrición y Dietética">
-                    <img src="https://via.placeholder.com/150?text=Nutricionista+1" alt="Dra. Laura Gómez">
+                    <img src="./Images/professional_2.png" alt="Dra. Laura Gómez">
                     <h3>Dra. Laura Gómez</h3>
                     <p class="specialty">Nutrición y Dietética</p>
                     <p class="description">Especialista en nutrición deportiva y control de peso.</p>
                     <a href="contacto.html" class="button-secondary">Agendar Cita</a>
                 </div>
                 <div class="professional-card" data-specialty="Psicología Clínica">
-                    <img src="https://via.placeholder.com/150?text=Psicologo+1" alt="Dr. Carlos Ruiz">
+                    <img src="./Images/professional_1.png" alt="Dr. Carlos Ruiz">
                     <h3>Dr. Carlos Ruiz</h3>
                     <p class="specialty">Psicología Clínica</p>
                     <p class="description">Experto en terapia cognitivo-conductual para ansiedad.</p>
                     <a href="contacto.html" class="button-secondary">Agendar Cita</a>
                 </div>
                 <div class="professional-card" data-specialty="Pediatría">
-                    <img src="https://via.placeholder.com/150?text=Pediatra+1" alt="Dra. Sofía Vargas">
+                    <img src="./Images/professional_2.png" alt="Dra. Sofía Vargas">
                     <h3>Dra. Sofía Vargas</h3>
                     <p class="specialty">Pediatría</p>
                     <p class="description">Pediatra con enfoque en desarrollo infantil y vacunas.</p>
                     <a href="contacto.html" class="button-secondary">Agendar Cita</a>
                 </div>
                 <div class="professional-card" data-specialty="Enfermería">
-                    <img src="https://via.placeholder.com/150?text=Enfermera+1" alt="Lic. María Fernanda">
+                    <img src="./Images/professional_2.png" alt="Lic. María Fernanda">
                     <h3>Lic. María Fernanda</h3>
                     <p class="specialty">Enfermería</p>
                     <p class="description">Enfermera jefe con experiencia en cuidado domiciliario.</p>
                     <a href="contacto.html" class="button-secondary">Agendar Cita</a>
                 </div>
                 <div class="professional-card" data-specialty="Nutrición y Dietética">
-                    <img src="https://via.placeholder.com/150?text=Nutricionista+2" alt="Lic. Pedro Sánchez">
+                    <img src="./Images/professional_1.png" alt="Lic. Pedro Sánchez">
                     <h3>Lic. Pedro Sánchez</h3>
                     <p class="specialty">Nutrición y Dietética</p>
                     <p class="description">Nutricionista especializado en dietas para enfermedades crónicas.</p>
                     <a href="contacto.html" class="button-secondary">Agendar Cita</a>
                 </div>
                 <div class="professional-card" data-specialty="Psicología Clínica">
-                    <img src="https://via.placeholder.com/150?text=Psicologo+2" alt="Dra. Isabel Torres">
+                    <img src="./Images/professional_2.png" alt="Dra. Isabel Torres">
                     <h3>Dra. Isabel Torres</h3>
                     <p class="specialty">Psicología Clínica</p>
                     <p class="description">Psicóloga con experiencia en terapia familiar y de pareja.</p>
@@ -137,11 +152,16 @@
         </section>
     </main>
 
+    <!-- Boton de Whatsapp -->
+    <a href="https://wa.me/573104099029" class="whatsapp-button" target="_blank">
+        <img src="./Images/whatsapp.png" alt="whatsapp button">
+    </a>
+
     <footer>
         <div class="footer-content">
             <div class="footer-section about">
                 <a href="index.html" class="logo-footer">
-                    <img src="./Images/logo.png" alt="logo">
+                    <img src="./Images/logo_original.png" alt="logo">
                 </a>
                 <p>Somos una institución dedicada a brindar servicios de salud de alta calidad con un enfoque humano y profesional.</p>
             </div>
@@ -163,8 +183,8 @@
             <div class="footer-section social">
                 <h3>Síguenos</h3>
                 <div class="social-icons">
-                    <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/share/1FsQga1D3k/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/grupo_medicosasociados?igsh=Y212dmtpODV0ZXJ2" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                 </div>
                 <div class="newsletter">
                     <h3>Newsletter</h3>
