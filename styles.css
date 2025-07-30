@@ -99,10 +99,10 @@ nav ul a {
 /* Whatsapp Floating Button */
 
 .whatsapp-button {
-    width: 60px;
-    height: 60px;
-    bottom: 50px;
-    right: 30px;
+    width: 50px;
+    height: 50px;
+    bottom: 90px;
+    right: 20px;
     position: fixed;
     z-index: 10;
     border-radius: 50%;
@@ -159,12 +159,12 @@ nav ul a {
         overflow: hidden;
     }
 
-    .whatsapp-button {
+    /* .whatsapp-button {
         width: 50px;
         height: 50px;
         bottom: 30px;
         right: 20px;
-    } 
+    }  */
 }
 
 /* Footer */

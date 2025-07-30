@@ -1,0 +1,139 @@
+.chatbot-container {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 350px;
+    height: 450px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 1000;
+    transform: scale(0.5);
+    transform-origin: bottom right;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.chatbot-container:not(.hidden) {
+    transform: scale(1);
+    opacity: 1;
+    visibility: visible;
+}
+
+.chatbot-header {
+    background-color: #283e88;
+    color: #fff;
+    padding: 15px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.chatbot-header .close-btn {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.chatbot-body {
+    flex-grow: 1;
+    padding: 15px;
+    overflow-y: auto;
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.message {
+    padding: 8px 12px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    max-width: 80%;
+}
+
+.bot-message {
+    background-color: #f1f1f1;
+    align-self: flex-start;
+}
+
+.user-message {
+    background-color: #283e88;
+    color: #fff;
+    align-self: flex-end;
+}
+
+.chatbot-footer {
+    display: flex;
+    padding: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.chatbot-footer input {
+    position: relative;
+    border-radius: 25px;
+    width: 85%;
+    padding: 10px 20px;
+    outline: none;
+    border: 1px solid #283e88;
+}
+
+.chatbot-footer button {
+    position: absolute;
+    bottom: 24px;
+    right: 70px;
+    background-color: #283e88;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.chatbot-footer span {
+    color: #f2f2f2;
+}
+
+#chatbot-toggler {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #283e88;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1001;
+    user-select: none;
+    transition: all 0.2s ease;
+}
+
+body.show-chatbot #chatbot-toggler {
+    transform: rotate(90deg);
+}
+
+#chatbot-toggler span {
+    color: #fff;
+    position: absolute;
+}
+
+body.show-chatbot #chatbot-toggler span:first-child,
+#chatbot-toggler span:last-child {
+    opacity: 0;
+}
+
+body.show-chatbot #chatbot-toggler span:last-child {
+    opacity: 1;
+}
+
+

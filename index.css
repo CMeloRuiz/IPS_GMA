@@ -368,6 +368,12 @@
     transform: scale(1.2);
 }
 
+@media (max-width: 400px) {
+    .services-overview {
+        padding: 30px;
+    }
+}
+
 /* Sección de Contacto (corta) */
 .contact-section {
     background-color: #8a94a6;
