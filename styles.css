@@ -45,12 +45,13 @@ header.scrolled .header-top {
     transition: 0.1s all;
 }
 
-.header-top span {
-    color: #fff;
-}
-
 .header-top i {
     margin-right: 7px;
+}
+
+.header-top-left-container {
+    display: flex;
+    align-items: center;
 }
 
 .header-bottom {
