@@ -10,7 +10,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const faq = {
         "direccion": "Nuestra direccion es: Calle 4 #8-84, Edificio Ricaurte / Ubaté",
+        "dirección": "Nuestra direccion es: Calle 4 #8-84, Edificio Ricaurte / Ubaté",
+        "teléfono": "Te puedes comunicar con nosotros a los telefonos: 3104099029 y 3044110839",
+        "teléfonos": "Te puedes comunicar con nosotros a los telefonos: 3104099029 y 3044110839",
         "telefono": "Te puedes comunicar con nosotros a los telefonos: 3104099029 y 3044110839",
+        "telefonos": "Te puedes comunicar con nosotros a los telefonos: 3104099029 y 3044110839",
+        "telefonico": "Te puedes comunicar con nosotros a los telefonos: 3104099029 y 3044110839",
+        "telefónico": "Te puedes comunicar con nosotros a los telefonos: 3104099029 y 3044110839",
         "cita": "Para agendar tu cita, puedes llamar a nuestra línea telefónica o usar el formulario de contacto en nuestra web.",
         "citas": "Para agendar tu cita, puedes llamar a nuestra línea telefónica o usar el formulario de contacto en nuestra web.",
         "horario": "Nuestro horario de atención es de Lunes a Viernes de 8:00 a.m. a 5:00 p.m.",

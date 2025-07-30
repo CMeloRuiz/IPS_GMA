@@ -79,6 +79,8 @@
     padding: 10px 20px;
     outline: none;
     border: 1px solid #283e88;
+    color: #212121;
+    font-size: 17px;
 }
 
 .chatbot-footer button {
