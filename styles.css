@@ -54,6 +54,10 @@ header.scrolled .header-top {
     align-items: center;
 }
 
+.header-top-left-container p {
+    color: #fff;
+}
+
 .header-bottom {
     background-color: #fff;
     height: 100px;
