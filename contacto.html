@@ -6,7 +6,9 @@
     <title>Grupo Médicos Asociados - Contacto</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="contacto.css">
+    <link rel="stylesheet" href="./chatbot.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
     <link rel="icon" href="./Images/favicon.png">
 </head>
 <body>
@@ -139,6 +141,31 @@
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.720093360461!2d-73.82073792635752!3d5.306300336112892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e403933b2dd6593%3A0x1e954efa91df539b!2sGrupo%20M%C3%A9dicos%20Asociados%20SAS!5e0!3m2!1sen!2sco!4v1752526597310!5m2!1sen!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </section>
+        <!-- ChatBot -->
+        <section class="chatbot">
+            <div class="chatbot-container hidden" id="chatbot-container">
+                <div class="chatbot-header">
+                    <h2 class="title-text">ChatBot</h2>
+                    <span class="material-symbols-rounded close-btn" id="close-chatbot">
+                        keyboard_arrow_down
+                    </span>
+                </div>
+                <div class="chatbot-body">
+                </div>
+                <div class="chatbot-footer">
+                    <input type="text" placeholder="Escribe tu pregunta..." id="user-input">
+                    <button id="send-btn">
+                        <span class="material-symbols-rounded">arrow_upward</span>
+                    </button>
+                </div>
+            </div>
+
+            <div id="chatbot-toggler">
+                <span class="material-symbols-rounded">mode_comment</span>
+                <span class="material-symbols-rounded">close</span>
+            </div>
+        </section>
+        <script src="./chatbot.js"></script>
     </main>
 
     <!-- Boton de Whatsapp -->
