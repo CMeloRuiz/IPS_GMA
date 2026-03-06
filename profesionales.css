@@ -43,7 +43,7 @@
     margin: 0 auto;
 }
 
-.team-section {
+/* .team-section {
     text-align: center;
     padding: 40px 40px 100px;
 }
@@ -145,10 +145,10 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* .professional-card:hover {
+.professional-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-} */
+}
 
 .professional-card img {
     width: 150px;
@@ -191,7 +191,63 @@
 
 .button-secondary:hover {
     background-color: #5b5e64;
+} */
+
+.hero-cards {
+    padding: 100px;
 }
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+}
+
+.card-wrapper {
+    height: 500px;
+    perspective: 1000px;
+}
+
+.card-inner {
+    background-color: #cccccc66;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.card-wrapper:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 30px;
+}
+
+.card-front, .card-back {
+    text-align: center;
+    padding: 20px 10px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    text-align: justify;
+    padding: 30px;
+    font-size: 14px;
+}
+
 
 @media (max-width: 768px) {
     .professionals-hero h1 {
