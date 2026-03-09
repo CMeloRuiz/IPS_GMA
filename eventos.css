@@ -102,10 +102,6 @@
     gap: 8px;
 }
 
-.event-info p i {
-    color: var(--primary-color);
-}
-
 .event-info .button-primary {
     margin-top: 15px;
     display: inline-block;
@@ -113,45 +109,58 @@
     font-size: 0.9em;
 }
 
-.past-event-card {
-    background-color: #f0f0f0;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    padding: 20px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+/* past events */
 
-.past-event-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.past-event-card img {
-    width: 200px;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 15px;
-}
-
-.past-event-card h3 {
-    font-size: 1.3em;
-    color: var(--text-color-dark);
-    margin-bottom: 8px;
-}
-
-.past-event-card p {
-    font-size: 0.9em;
-    color: #777;
-    margin-bottom: 5px;
-}
-
-.event-grid {
+.past-events-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
     justify-content: center;
+}
+
+.past-events img {
+    height: 380px;
+    border-radius: 10px;
+    margin-bottom: 16px;
+}
+
+.wrapper-past-event-card {
+    height: 500px;
+    perspective: 1000px;
+}
+
+.past-event-card {
+    background-color: #f0f0f0;
+    font-size: 14px;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.wrapper-past-event-card:hover .past-event-card {
+    transform: rotateY(180deg);
+}
+
+.card-front-event, .card-back-event {
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-back-event {
+    transform: rotateY(180deg);
+    text-align: justify;
+    padding: 30px;
+    font-size: 14px;
 }
 
 /* Responsive adjustments for eventos.css */
