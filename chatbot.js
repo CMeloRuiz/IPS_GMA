@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "servicios": "Ofrecemos servicios de nutrición, psicología, pediatría, y otros. Puedes ver el listado completo en la sección de 'Servicios'.",
         "ubicacion": "Estamos ubicados en [Tu Dirección]. Puedes encontrar el mapa en la sección de 'Contacto'.",
         "seguros": "Trabajamos con [Nombres de seguros]. Por favor, confirma tu plan con tu aseguradora.",
-        "hola": "¡Hola! Soy el asistente virtual de la IPS. ¿En qué puedo ayudarte?",
+        "hola": "¡Hola! Soy el asistente virtual de la IPS Grupo Medicos Asociados. ¿En qué puedo ayudarte?",
         "gracias": "De nada, estoy para servirte.",
         "ayuda": "Puedo responder preguntas sobre horarios, servicios, ubicaciones y citas. Si necesitas algo más, por favor contáctanos directamente.",
         "defecto": "Lo siento, no entiendo tu pregunta. ¿Podrías ser más específico? Te puedo dar información sobre citas, horarios, o servicios."
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
         chatbotContainer.classList.toggle('hidden');
 
         if (!chatbotContainer.classList.contains('hidden') && !welcomeMessageSent) {
-            addMessage("¡Hola! Soy el asistente virtual de la IPS. ¿En qué puedo ayudarte hoy?", 'bot');
+            addMessage("¡Hola! Soy el asistente virtual de la IPS Grupo Medicos Asociados. ¿En qué puedo ayudarte hoy?", 'bot');
             welcomeMessageSent = true; 
         }
     }

@@ -56,57 +56,59 @@
     margin-bottom: 30px;
 }
 
+/* Upcoming Events */
+
 .event-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 500px));
     gap: 30px;
     justify-content: center;
 }
 
-.event-card {
-    background-color: #ffffff;
+.upcoming-events img {
+    height: 380px;
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 16px;
 }
 
-.event-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+.wrapper-event-card {
+    height: 500px;
+    perspective: 1000px;
 }
 
-.event-card img {
+.event-card {
+    background-color: #f0f0f0;
+    font-size: 14px;
+    border-radius: 10px;
     width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-bottom: 1px solid #eee;
+    height: 100%;
+    position: relative;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
 }
 
-.event-info {
-    padding: 20px;
+.wrapper-event-card:hover .event-card {
+    transform: rotateY(180deg);
 }
 
-.event-info h3 {
-    font-size: 1.6em;
-    color: var(--text-color-dark);
-    margin-bottom: 10px;
-}
-
-.event-info p {
-    font-size: 0.95em;
-    color: #666;
-    margin-bottom: 8px;
+.event-info-front, .event-info-back {
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    backface-visibility: hidden;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: 8px;
 }
 
-.event-info .button-primary {
-    margin-top: 15px;
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 0.9em;
+.event-info-back {
+    transform: rotateY(180deg);
+    text-align: justify;
+    padding: 30px;
+    font-size: 14px;
 }
 
 /* past events */
@@ -189,7 +191,7 @@
         font-size: 2em;
     }
 
-    .event-info h3 {
+    .event-info-front h3 {
         font-size: 1.4em;
     }
 }
