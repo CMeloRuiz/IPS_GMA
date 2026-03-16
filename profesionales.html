@@ -65,189 +65,191 @@
             <p>Conoce al equipo de expertos que cuida de tu salud.</p>
         </section>
 
-        <!-- <section class="team-section">
-            <h2>Nuestro Equipo</h2>
-            <div class="team-members">
-                <div class="member-card">
-                    <img src="./Images/doctor_1.png" alt="Dr. Juan Pérez">
-                    <h3>Dr. Juan Pérez</h3>
-                    <p>Director Médico</p>
-                    <p>Especialista en Medicina Interna con más de 20 años de experiencia.</p>
-                </div>
-                <div class="member-card">
-                    <img src="./Images/doctor_2.png" alt="Lic. Ana García">
-                    <h3>Lic. Ana García</h3>
-                    <p>Jefa de Enfermería</p>
-                    <p>Líder en el cuidado de pacientes y gestión de equipos de enfermería.</p>
-                </div>
-                <div class="member-card">
-                    <img src="./Images/doctor_2.png" alt="Dra. Sofía López">
-                    <h3>Dra. Sofía López</h3>
-                    <p>Coordinadora de Nutrición</p>
-                    <p>Experta en planes nutricionales personalizados y dietoterapia.</p>
-                </div>
+        <section class="team-tabs-section">
+            <div class="team-tabs">
+                <button class="tab-btn active" data-tab="asistencial">
+                    Personal Asistencial
+                </button>
+                <button class="tab-btn" data-tab="administrativo">
+                    Personal Administrativo
+                </button>
             </div>
-        </section>
 
-        <section class="professional-directory">
-            <h2>Directorio de Especialistas</h2>
-            <div class="filter-controls">
-                <input type="text" id="searchBar" placeholder="Buscar por nombre o especialidad...">
-                <select id="specialtyFilter">
-                    <option value="">Todas las Especialidades</option>
-                    <option value="Medicina general">Medicina general</option>
-                    <option value="Pediatría">Pediatría</option>
-                    <option value="Ginecologia">Ginecologia</option>
-                    <option value="Enfermería">Enfermería</option>
-                    <option value="Ecografia">Ecografia</option>
-                    <option value="Psicología Clínica">Psicología Clínica</option> 
-                    <option value="Nutrición y Dietética">Nutrición y Dietética</option>
-                    <option value="Electrocardiograma">Electrocardiograma</option>
-                    <option value="Holter">Holter</option>
-                    <option value="MAPA">MAPA</option>
-                    </select>
+            <!-- TAB ASISTENCIAL -->
+            <div class="tab-content active" id="asistencial">
+                <div class="cards-container">
+                    <!-- CARDS -->
+                    <div class="card-wrapper">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <img src="./Images/doctor_1.png" alt="doctor-image">
+                                <h2>Shelvis Varela</h2>
+                                <h3>Gerente General<br>Medico Cirujano Pediatra</h3>
+                            </div>
+                            <div class="card-back">
+                                <p>Médico Cirujano Pediatra, egresado de la Universidad del Zulia (Venezuela) con distinción Summa Cum Laude, especialista en Cirugía Pediátrica, con amplia experiencia en el manejo quirúrgico y postoperatorio de pacientes pediátricos desde recién nacidos hasta adolescentes, bajo un enfoque integral, seguro y empático.<br>
+                                <br>Actualmente es Director General del servicio médico de la IPS Grupo Médicos Asociados, donde lidera el equipo asistencial promoviendo la actualización científica, la empatía en la atención y el crecimiento profesional continuo. <br><br>Su práctica clínica y gerencial se distingue por la toma de decisiones oportunas, la individualización de cada caso y el compromiso con el bienestar infantil, así como por su interés en la investigación, el desarrollo de protocolos de seguridad y la implementación de avances en pediatría y medicina general.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-wrapper">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <img src="./Images/doctor_2.png" alt="doctor-image">
+                                <h2>Gisell Martinez</h2>
+                                <h3>Medico General</h3>
+                            </div>
+                            <div class="card-back">
+                                <p>Médico General, egresada de la Escuela Latinoamericana de Ciencias Médicas (ELAM), Cuba, con formación académica humanizada y enfoque en Atención Primaria en Salud. Cuenta con experiencia en consulta externa, urgencias y programas de promoción y prevención (PyP), desarrollando su ejercicio profesional con alto sentido de responsabilidad, compromiso ético y vocación de servicio.<br>
+                                <br>Ha laborado en instituciones públicas y privadas del sector salud, acumulando experiencia en diferentes niveles de atención. Actualmente forma parte del equipo asistencial de la IPS Grupo Médicos Asociados S.A.S., donde se destaca por sus habilidades clínicas, la comunicación efectiva con pacientes y el trabajo en equipo interdisciplinario.<br>
+                                <br>Su práctica médica se caracteriza por un abordaje integral y humano del paciente, la toma de decisiones clínicas oportunas y el interés constante en fortalecer la calidad de la atención, contribuyendo al bienestar individual y comunitario.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-wrapper">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <img src="./Images/doctor_3.png" alt="doctor-image">
+                                <h2>Alejandra Martinez</h2>
+                                <h3>Médico Cirujano<br>Especialista en Pediatría y Puericultura</h3>
+                            </div>
+                            <div class="card-back">
+                                <p>La Dra. Alejandra Martínez Sosa es médico cirujano con más de 17 años de experiencia en el sector salud, con trayectoria en instituciones públicas y privadas. Especialista en Pediatría y Puericultura, cuenta con amplia experiencia en atención clínica pediátrica, manejo de pacientes en unidades de cuidados intensivos y atención de urgencias.<br><br>
+                                A lo largo de su carrera ha desarrollado habilidades en el diagnóstico, tratamiento y seguimiento de pacientes pediátricos, con un enfoque integral y humanizado. Su experiencia incluye el manejo de patologías agudas y crónicas, trabajo en equipos interdisciplinarios y aplicación de protocolos clínicos orientados a mejorar la calidad de la atención.<br><br>
+                                Además, ha desempeñado funciones como médico adjunto en unidades de cuidados intensivos pediátricos, médico pediatra y médico general en diversas instituciones. Cuenta también con formación en soporte vital avanzado, cuidados paliativos y humanización de los servicios de salud, destacándose por su compromiso con la calidad, la ética y la vocación de servicio.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-wrapper">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <img src="./Images/doctor_4.png" alt="doctor-image">
+                                <h2>Angelica Rincon</h2>
+                                <h3>Psicólogo Clínico<br>Máster en Psicología Clínica y Salud Mental</h3>
+                            </div>
+                            <div class="card-back">
+                                <p>Psicóloga Clínica, Máster en Psicología Clínica y Salud Mental, con más de dos años de experiencia en intervenciones psicoterapéuticas bajo el enfoque cognitivo-conductual. Cuenta con experiencia en el abordaje de diversas psicopatologías y eventos de vida que impactan la calidad de vida de los pacientes en todas las etapas del ciclo vital.<br><br>
+                                Su ejercicio profesional se desarrolla dentro de un modelo de atención integral en salud, trabajando de manera articulada con equipos interdisciplinarios, brindando acompañamiento psicológico personalizado, orientado a fortalecer el bienestar emocional, la adaptación y el desarrollo de estrategias de afrontamiento ajustadas a las necesidades individuales de cada paciente.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-wrapper">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <img src="./Images/doctor_5.png" alt="doctor-image">
+                                <h2>Elizabeth Markarian</h2>
+                                <h3>Médico Cirujano<br>Especialista en radiología</h3>
+                            </div>
+                            <div class="card-back">
+                                <p>Médica Cirujana, Especialista en Diagnóstico por Imágenes (Radiología), con amplia trayectoria clínica, académica y asistencial. Cuenta con más de dos décadas de experiencia en la interpretación de radiografías, ecografía, tomografía computarizada y resonancia magnética, con especial experticia en patología mamaria.<br><br>
+                                Ha desempeñado cargos asistenciales, de liderazgo y docencia universitaria, participando activamente en la formación de talento humano en salud y en múltiples escenarios clínicos de alta complejidad. Su ejercicio profesional se distingue por el rigor diagnóstico, la toma de decisiones clínicas precisas y el compromiso con la seguridad del paciente.<br><br>
+                                Posee una destacada trayectoria investigativa, con participación como autora y ponente en congresos nacionales e internacionales, así como reconocimientos científicos otorgados por sociedades de radiología y pediatría. Actualmente se desempeña como médica radióloga en instituciones de salud en Colombia, aportando su experiencia al fortalecimiento de modelos de atención diagnóstica basados en la excelencia, la ética y la actualización científica permanente.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-wrapper">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <img src="./Images/doctor_1.png" alt="doctor-image">
+                                <h2>Wilson Torres</h2>
+                                <h3>Médico Obstetra y Ginecólogo<br>Especialista en Medicina Materno Fetal</h3>
+                            </div>
+                            <div class="card-back">
+                                <p>Médico Obstetra y Ginecólogo, Especialista en Medicina Materno Fetal, egresado de la Universidad Nacional de Colombia, con formación avanzada en diagnóstico prenatal y manejo de embarazos de alto riesgo, realizada en el Instituto Nacional de Perinatología (INPer), México. Cuenta con amplia experiencia en atención hospitalaria, ambulatoria, quirúrgica y de urgencias, así como en la realización de ecografías especializadas y procedimientos invasivos prenatales.<br><br>
+                                Posee formación complementaria en Administración de Salud Pública, lo que le permite integrar el enfoque clínico con la gestión eficiente de los servicios de salud y el cumplimiento de la normatividad vigente en Colombia. Ha participado activamente en docencia universitaria, auditoría en salud y asesoría perinatal a nivel institucional.<br><br>
+                                Su ejercicio profesional se caracteriza por el análisis integral de casos complejos, la toma de decisiones oportunas y el compromiso con la atención primaria en salud, la maternidad segura y la protección de los derechos sexuales y reproductivos, aportando al fortalecimiento de modelos de atención materno-fetal basados en la calidad, la seguridad y la excelencia médica.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-wrapper">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <img src="./Images/doctor_2.png" alt="doctor-image">
+                                <h2>Elvira Carrillo</h2>
+                                <h3>Profesional en Nutrición y Dietética</h3>
+                            </div>
+                            <div class="card-back">
+                                <p>Nutricionista – Dietista, egresada de la Pontificia Universidad Javeriana, con más de 25 años de experiencia en el sector salud, desempeñándose tanto en el ámbito clínico como en programas de Promoción y Prevención (PIC) y Salud Pública. Cuenta con una sólida trayectoria en instituciones hospitalarias, clínicas y entidades territoriales de salud.<br><br>
+                                Su ejercicio profesional se ha enfocado en la atención nutricional integral, el acompañamiento a pacientes en diferentes etapas del ciclo vital y la implementación de estrategias orientadas a la promoción de hábitos de vida saludables y la prevención de enfermedades.<br><br>
+                                Se caracteriza por su compromiso, responsabilidad y vocación de servicio, aportando su experiencia al fortalecimiento de modelos de atención en salud basados en la calidad, la educación nutricional y el bienestar individual y comunitario.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-wrapper">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <img src="./Images/auxiliar_1.png" alt="doctor-image">
+                                <h2>Heymi Sanchez</h2>
+                                <h3>Auxiliar de Enfermeria</h3>
+                            </div>
+                            <div class="card-back">
+                                <p>Auxiliar de Enfermería, con formación técnica y amplia experiencia en el sector salud, desempeñándose tanto en el ámbito hospitalario como ambulatorio y farmacéutico. Cuenta con más de cinco años de experiencia en el apoyo a procesos asistenciales, administración de medicamentos, toma de signos vitales y acompañamiento al paciente, así como experiencia adicional en droguería y dispensación farmacéutica.<br><br>
+                                Ha laborado en instituciones de salud y droguerías reconocidas, desarrollando funciones relacionadas con la atención directa al paciente, control de inventarios, revisión de fechas de vencimiento, recepción y registro de medicamentos, y apoyo a procedimientos de enfermería.<br><br>
+                                Se caracteriza por su responsabilidad, puntualidad y compromiso con la calidad del servicio, aportando un enfoque humano, organizado y colaborativo al trabajo en equipo, orientado al bienestar y la seguridad de los pacientes en cada etapa de la atención.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-wrapper">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <img src="./Images/auxiliar_1.png" alt="doctor-image">
+                                <h2>Alba Sanchez</h2>
+                                <h3>Auxiliar de Enfermeria</h3>
+                            </div>
+                            <div class="card-back">
+                                <p>Auxiliar de enfermería con formación técnica en el área de la salud y experiencia en atención prehospitalaria y manejo inicial de pacientes en situaciones de emergencia. Se caracteriza por su capacidad para intervenir de manera oportuna en escenarios críticos, aplicando conocimientos en primeros auxilios, soporte vital básico y atención inicial del paciente.<br><br>
+                                A lo largo de su trayectoria ha participado en la atención y estabilización de pacientes en situaciones de trauma y emergencias médicas, realizando valoración de signos vitales, control de hemorragias, inmovilización y traslado seguro de pacientes. Su experiencia en servicios de atención prehospitalaria le ha permitido fortalecer habilidades de respuesta rápida y trabajo coordinado con equipos de salud y rescate.<br><br>
+                                Además, cuenta con experiencia como bombero tripulante, participando en la atención de incendios, rescates y accidentes de tránsito, brindando primeros auxilios y apoyo en la estabilización de víctimas. También ha desarrollado práctica hospitalaria apoyando la atención directa de pacientes, destacándose por su compromiso con la atención humanizada, el trabajo en equipo y la seguridad del paciente.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="professional-grid" id="professionalGrid">
-                <div class="professional-card" data-specialty="Nutrición y Dietética">
-                    <img src="./Images/professional_2.png" alt="Dra. Laura Gómez">
-                    <h3>Dra. Laura Gómez</h3>
-                    <p class="specialty">Nutrición y Dietética</p>
-                    <p class="description">Especialista en nutrición deportiva y control de peso.</p>
-                    <a href="contacto.html" class="button-secondary">Agendar Cita</a>
-                </div>
-                <div class="professional-card" data-specialty="Psicología Clínica">
-                    <img src="./Images/professional_1.png" alt="Dr. Carlos Ruiz">
-                    <h3>Dr. Carlos Ruiz</h3>
-                    <p class="specialty">Psicología Clínica</p>
-                    <p class="description">Experto en terapia cognitivo-conductual para ansiedad.</p>
-                    <a href="contacto.html" class="button-secondary">Agendar Cita</a>
-                </div>
-                <div class="professional-card" data-specialty="Pediatría">
-                    <img src="./Images/professional_2.png" alt="Dra. Sofía Vargas">
-                    <h3>Dra. Sofía Vargas</h3>
-                    <p class="specialty">Pediatría</p>
-                    <p class="description">Pediatra con enfoque en desarrollo infantil y vacunas.</p>
-                    <a href="contacto.html" class="button-secondary">Agendar Cita</a>
-                </div>
-                <div class="professional-card" data-specialty="Enfermería">
-                    <img src="./Images/professional_2.png" alt="Lic. María Fernanda">
-                    <h3>Lic. María Fernanda</h3>
-                    <p class="specialty">Enfermería</p>
-                    <p class="description">Enfermera jefe con experiencia en cuidado domiciliario.</p>
-                    <a href="contacto.html" class="button-secondary">Agendar Cita</a>
-                </div>
-                <div class="professional-card" data-specialty="Nutrición y Dietética">
-                    <img src="./Images/professional_1.png" alt="Lic. Pedro Sánchez">
-                    <h3>Lic. Pedro Sánchez</h3>
-                    <p class="specialty">Nutrición y Dietética</p>
-                    <p class="description">Nutricionista especializado en dietas para enfermedades crónicas.</p>
-                    <a href="contacto.html" class="button-secondary">Agendar Cita</a>
-                </div>
-                <div class="professional-card" data-specialty="Psicología Clínica">
-                    <img src="./Images/professional_2.png" alt="Dra. Isabel Torres">
-                    <h3>Dra. Isabel Torres</h3>
-                    <p class="specialty">Psicología Clínica</p>
-                    <p class="description">Psicóloga con experiencia en terapia familiar y de pareja.</p>
-                    <a href="contacto.html" class="button-secondary">Agendar Cita</a>
-                </div>
-            </div>
-        </section> -->
 
-        <section class="hero-cards">
-            <div class="cards-container">
-                <div class="card-wrapper">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <img src="./Images/doctor_2.png" alt="doctor-image">
-                            <h2>Gisell Martinez</h2>
-                            <h3>Medico General</h3>
-                        </div>
-                        <div class="card-back">
-                            <p>Médico General, egresada de la Escuela Latinoamericana de Ciencias Médicas (ELAM), Cuba, con formación académica humanizada y enfoque en Atención Primaria en Salud. Cuenta con experiencia en consulta externa, urgencias y programas de promoción y prevención (PyP), desarrollando su ejercicio profesional con alto sentido de responsabilidad, compromiso ético y vocación de servicio.<br>
-                            <br>Ha laborado en instituciones públicas y privadas del sector salud, acumulando experiencia en diferentes niveles de atención. Actualmente forma parte del equipo asistencial de la IPS Grupo Médicos Asociados S.A.S., donde se destaca por sus habilidades clínicas, la comunicación efectiva con pacientes y el trabajo en equipo interdisciplinario.<br>
-                            <br>Su práctica médica se caracteriza por un abordaje integral y humano del paciente, la toma de decisiones clínicas oportunas y el interés constante en fortalecer la calidad de la atención, contribuyendo al bienestar individual y comunitario.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-wrapper">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <img src="./Images/doctor_1.png" alt="doctor-image">
-                            <h2>Shelvis Varela</h2>
-                            <h3>Pediatra</h3>
-                        </div>
-                        <div class="card-back">
-                            <p>Médico Cirujano Pediatra, egresado de la Universidad del Zulia (Venezuela) con distinción Summa Cum Laude, especialista en Cirugía Pediátrica, con amplia experiencia en el manejo quirúrgico y postoperatorio de pacientes pediátricos desde recién nacidos hasta adolescentes, bajo un enfoque integral, seguro y empático.<br>
-                            <br>Actualmente es Director General del servicio médico de la IPS Grupo Médicos Asociados, donde lidera el equipo asistencial promoviendo la actualización científica, la empatía en la atención y el crecimiento profesional continuo. <br><br>Su práctica clínica y gerencial se distingue por la toma de decisiones oportunas, la individualización de cada caso y el compromiso con el bienestar infantil, así como por su interés en la investigación, el desarrollo de protocolos de seguridad y la implementación de avances en pediatría y medicina general.</p>
+            <!-- TAB ADMINISTRATIVO -->
+            <div class="tab-content" id="administrativo">
+                <div class="cards-container">
+                    <!-- CARDS -->
+                    <div class="card-wrapper">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <img src="./Images/administrativo_1.png">
+                                <h2>Nelson Castañeda</h2>
+                                <h3>Contador</h3>
+                            </div>
+                            <div class="card-back">
+                                <p>Contador público egresado de la Universidad de Cundinamarca, con experiencia en procesos contables, tributarios y administrativos dentro del sector empresarial. Su perfil profesional se orienta al manejo, análisis y control de la información financiera, contribuyendo al cumplimiento de las obligaciones contables y fiscales de las organizaciones.<br><br>
+                                A lo largo de su trayectoria ha desarrollado competencias en registro y control de operaciones contables, conciliaciones bancarias y de caja, análisis tributario y preparación de impuestos. También cuenta con experiencia en facturación electrónica, elaboración de comprobantes contables, recibos de caja, documentos soporte electrónicos y gestión documental en procesos administrativos y contables.<br><br>
+                                Posee experiencia en el manejo de nómina electrónica y en la verificación de información contable frente a los registros reportados ante la DIAN. Además, maneja herramientas tecnológicas y software contable como Siigo Nube, Siigo Pyme, Alegra y Xubio, destacándose por su capacidad analítica, organización y compromiso con el cumplimiento normativo y la eficiencia administrativa.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="card-wrapper">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <img src="./Images/doctor_2.png" alt="doctor-image">
-                            <h2>Angelica Rincon</h2>
-                            <h3>Psicologa</h3>
-                        </div>
-                        <div class="card-back">
-                            <p>Psicóloga Clínica, Máster en Psicología Clínica y Salud Mental, con más de dos años de experiencia en intervenciones psicoterapéuticas bajo el enfoque cognitivo-conductual. Cuenta con experiencia en el abordaje de diversas psicopatologías y eventos de vida que impactan la calidad de vida de los pacientes en todas las etapas del ciclo vital.<br><br>
-                            Su ejercicio profesional se desarrolla dentro de un modelo de atención integral en salud, trabajando de manera articulada con equipos interdisciplinarios, brindando acompañamiento psicológico personalizado, orientado a fortalecer el bienestar emocional, la adaptación y el desarrollo de estrategias de afrontamiento ajustadas a las necesidades individuales de cada paciente.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-wrapper">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <img src="./Images/doctor_2.png" alt="doctor-image">
-                            <h2>Elizabeth Markarian</h2>
-                            <h3>Radiologa</h3>
-                        </div>
-                        <div class="card-back">
-                            <p>Médica Cirujana, Especialista en Diagnóstico por Imágenes (Radiología), con amplia trayectoria clínica, académica y asistencial. Cuenta con más de dos décadas de experiencia en la interpretación de radiografías, ecografía, tomografía computarizada y resonancia magnética, con especial experticia en patología mamaria.<br><br>
-                            Ha desempeñado cargos asistenciales, de liderazgo y docencia universitaria, participando activamente en la formación de talento humano en salud y en múltiples escenarios clínicos de alta complejidad. Su ejercicio profesional se distingue por el rigor diagnóstico, la toma de decisiones clínicas precisas y el compromiso con la seguridad del paciente.<br><br>
-                            Posee una destacada trayectoria investigativa, con participación como autora y ponente en congresos nacionales e internacionales, así como reconocimientos científicos otorgados por sociedades de radiología y pediatría. Actualmente se desempeña como médica radióloga en instituciones de salud en Colombia, aportando su experiencia al fortalecimiento de modelos de atención diagnóstica basados en la excelencia, la ética y la actualización científica permanente.</p>
+                    <div class="card-wrapper">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <img src="./Images/administrativo_2.png">
+                                <h2>Paula Guevara</h2>
+                                <h3>Administradora</h3>
+                            </div>
+                            <div class="card-back">
+                                <p>Auxiliar administrativa y contable con formación técnica en Contabilización de Operaciones Comerciales y Financieras y estudios en curso en Administración en Servicios de Salud. Cuenta con experiencia en la gestión de procesos administrativos, contables y operativos dentro del sector servicios, destacándose por su organización y capacidad para optimizar los procesos administrativos que respaldan la operación institucional.<br><br>
+                                Su experiencia profesional incluye el manejo de información contable, apoyo en procesos de facturación electrónica, elaboración de documentos administrativos y gestión documental. También posee experiencia en liquidación de nómina, afiliaciones al sistema de seguridad social y apoyo a los procesos de talento humano, contribuyendo al adecuado cumplimiento de los procedimientos administrativos y normativos de la organización.<br><br>
+                                Además, cuenta con manejo de herramientas ofimáticas y software contable para el registro, control y seguimiento de información financiera y administrativa. Su formación en Administración en Servicios de Salud fortalece su enfoque hacia la gestión administrativa en el sector sanitario, destacándose por su responsabilidad, capacidad analítica y compromiso con la mejora continua de los procesos institucionales.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="card-wrapper">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <img src="./Images/doctor_1.png" alt="doctor-image">
-                            <h2>Wilson Torres</h2>
-                            <h3>Ginecologo</h3>
-                        </div>
-                        <div class="card-back">
-                            <p>Médico Obstetra y Ginecólogo, Especialista en Medicina Materno Fetal, egresado de la Universidad Nacional de Colombia, con formación avanzada en diagnóstico prenatal y manejo de embarazos de alto riesgo, realizada en el Instituto Nacional de Perinatología (INPer), México. Cuenta con amplia experiencia en atención hospitalaria, ambulatoria, quirúrgica y de urgencias, así como en la realización de ecografías especializadas y procedimientos invasivos prenatales.<br><br>
-                            Posee formación complementaria en Administración de Salud Pública, lo que le permite integrar el enfoque clínico con la gestión eficiente de los servicios de salud y el cumplimiento de la normatividad vigente en Colombia. Ha participado activamente en docencia universitaria, auditoría en salud y asesoría perinatal a nivel institucional.<br><br>
-                            Su ejercicio profesional se caracteriza por el análisis integral de casos complejos, la toma de decisiones oportunas y el compromiso con la atención primaria en salud, la maternidad segura y la protección de los derechos sexuales y reproductivos, aportando al fortalecimiento de modelos de atención materno-fetal basados en la calidad, la seguridad y la excelencia médica.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-wrapper">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <img src="./Images/doctor_2.png" alt="doctor-image">
-                            <h2>Elvira Carrillo</h2>
-                            <h3>Nutricionista</h3>
-                        </div>
-                        <div class="card-back">
-                            <p>Nutricionista – Dietista, egresada de la Pontificia Universidad Javeriana, con más de 25 años de experiencia en el sector salud, desempeñándose tanto en el ámbito clínico como en programas de Promoción y Prevención (PIC) y Salud Pública. Cuenta con una sólida trayectoria en instituciones hospitalarias, clínicas y entidades territoriales de salud.<br><br>
-                            Su ejercicio profesional se ha enfocado en la atención nutricional integral, el acompañamiento a pacientes en diferentes etapas del ciclo vital y la implementación de estrategias orientadas a la promoción de hábitos de vida saludables y la prevención de enfermedades.<br><br>
-                            Se caracteriza por su compromiso, responsabilidad y vocación de servicio, aportando su experiencia al fortalecimiento de modelos de atención en salud basados en la calidad, la educación nutricional y el bienestar individual y comunitario.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-wrapper">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <img src="./Images/doctor_2.png" alt="doctor-image">
-                            <h2>Heymi Sanchez</h2>
-                            <h3>Auxiliar de Enfermeria</h3>
-                        </div>
-                        <div class="card-back">
-                            <p>Auxiliar de Enfermería, con formación técnica y amplia experiencia en el sector salud, desempeñándose tanto en el ámbito hospitalario como ambulatorio y farmacéutico. Cuenta con más de cinco años de experiencia en el apoyo a procesos asistenciales, administración de medicamentos, toma de signos vitales y acompañamiento al paciente, así como experiencia adicional en droguería y dispensación farmacéutica.<br><br>
-                            Ha laborado en instituciones de salud y droguerías reconocidas, desarrollando funciones relacionadas con la atención directa al paciente, control de inventarios, revisión de fechas de vencimiento, recepción y registro de medicamentos, y apoyo a procedimientos de enfermería.<br><br>
-                            Se caracteriza por su responsabilidad, puntualidad y compromiso con la calidad del servicio, aportando un enfoque humano, organizado y colaborativo al trabajo en equipo, orientado al bienestar y la seguridad de los pacientes en cada etapa de la atención.</p>
+                    <div class="card-wrapper">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <img src="./Images/administrativo_3.png">
+                                <h2>Diana Rodriguez</h2>
+                                <h3>Auxiliar Administrativo</h3>
+                            </div>
+                            <div class="card-back">
+                                <p>Tecnóloga en Minería Bajo Tierra, con experiencia en áreas administrativas, operativas y atención al cliente en diferentes sectores laborales. Se caracteriza por ser una persona responsable, organizada y comprometida con el cumplimiento de las funciones asignadas, destacándose por su capacidad para trabajar en equipo y adaptarse a distintos entornos de trabajo.
+                                <br><br>A lo largo de su trayectoria laboral ha desempeñado cargos en áreas administrativas, comerciales y operativas, incluyendo funciones como secretaría administrativa, administradora de punto de venta, auxiliar de laboratorio y auxiliar de caja. Estas experiencias le han permitido desarrollar habilidades en manejo de clientes, control administrativo, apoyo en procesos organizacionales y manejo básico de recursos humanos y nómina. Cuenta además con formación complementaria en manejo de computadores y una base académica técnica en comercio, lo que fortalece su perfil para desempeñarse en actividades administrativas, comerciales y de apoyo organizacional.<br><br>
+                                Se distingue por su actitud proactiva, disposición para el aprendizaje continuo y capacidad para aportar al buen funcionamiento de los equipos de trabajo, manteniendo siempre un trato respetuoso y profesional con compañeros, superiores y clientes.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -279,6 +281,7 @@
                 <span class="material-symbols-rounded">close</span>
             </div>
         </section>
+        <script src="./profesionales.js"></script>
         <script src="./chatbot.js"></script>
     </main>
 
