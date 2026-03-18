@@ -56,113 +56,163 @@
     margin-bottom: 30px;
 }
 
-/* Upcoming Events */
+/* Event Cards */
 
-.event-list {
-    display: grid;
-    /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 500px));
-    gap: 30px;
-    justify-content: center;
+.events-section{
+    padding: 80px;
+    background: #8891a3;
 }
 
-.upcoming-events img {
-    height: 380px;
-    border-radius: 10px;
-    margin-bottom: 16px;
-}
-
-.wrapper-event-card {
-    height: 500px;
-    perspective: 1000px;
-}
-
-.event-card {
-    background-color: #f0f0f0;
-    font-size: 14px;
-    border-radius: 10px;
-    width: 100%;
-    height: 100%;
-    position: relative;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-}
-
-.wrapper-event-card:hover .event-card {
-    transform: rotateY(180deg);
-}
-
-.event-info-front, .event-info-back {
+.events-section h2{
     text-align: center;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    backface-visibility: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    color: white;
+    margin-bottom: 40px;
+    font-size: 2.2rem;
 }
 
-.event-info-back {
-    transform: rotateY(180deg);
-    text-align: justify;
-    padding: 30px;
-    font-size: 14px;
+.mt{
+    margin-top: 80px;
 }
 
-/* past events */
+/* GRID */
 
-.past-events-grid {
+.events-grid{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    justify-content: center;
+    gap: 40px;
 }
 
-.past-events img {
-    height: 380px;
-    border-radius: 10px;
-    margin-bottom: 16px;
+/* CARD */
+
+.event-card-container{
+    height: 420px;
 }
 
-.wrapper-past-event-card {
-    height: 500px;
-    perspective: 1000px;
-}
-
-.past-event-card {
-    background-color: #f0f0f0;
-    font-size: 14px;
-    border-radius: 10px;
-    width: 100%;
-    height: 100%;
+.event-card{
     position: relative;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-}
-
-.wrapper-past-event-card:hover .past-event-card {
-    transform: rotateY(180deg);
-}
-
-.card-front-event, .card-back-event {
-    text-align: center;
-    height: 100%;
     width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+/* CARAS */
+
+.event-face{
     position: absolute;
-    backface-visibility: hidden;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+/* FRONT */
+
+.event-front{
+    background: white;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    z-index: 2;
+    transition: opacity .3s ease;
 }
 
-.card-back-event {
-    transform: rotateY(180deg);
-    text-align: justify;
-    padding: 30px;
-    font-size: 14px;
+/* IMAGEN */
+
+.event-front img{
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+/* CONTENIDO */
+
+.event-front-content{
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* 🔥 esto es CLAVE */
+}
+
+.event-front-content h3{
+    color: #0d2a6a;
+    margin-bottom: 10px;
+}
+
+.event-front-content p{
+    font-size: 13px;
+    color: #555;
+    margin: 4px 0;
+}
+
+.event-front-content i{
+    margin-right: 5px;
+    color: #0d2a6a;
+}
+
+.event-front-content span{
+    display: block;
+    margin-top: 10px;
+    font-size: 13px;
+    color: #777;
+}
+
+/* BACK */
+
+.event-back{
+    background: linear-gradient(135deg,#0d2a6a,#243c78);
+    color: white;
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* 🔥 mejor distribución */
+    padding: 20px;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: all .5s ease;
+    z-index: 3;
+}
+
+/* ACTIVO */
+
+.event-card.active .event-back{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.event-card.active .event-front{
+    opacity: 0;
+}
+
+/* BOTÓN FRONT */
+
+.btn-more{
+    margin-top: auto; /* 🔥 lo baja al fondo */
+    align-self: flex-end;
+    background: #0d2a6a;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: .3s;
+}
+
+.btn-more:hover{
+    background: #1c3d8f;
+}
+
+/* BOTÓN BACK */
+
+.btn-back{
+    align-self: flex-end;
+    background: white;
+    color: #0d2a6a;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
 }
 
 /* Responsive adjustments for eventos.css */

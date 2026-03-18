@@ -61,100 +61,96 @@
             <p>Mantente informado sobre nuestras charlas, talleres y campañas de salud.</p>
         </section>
 
-        <section class="upcoming-events">
+        <!-- EVENTS -->
+        <section class="events-section">
+            <!-- PROXIMOS EVENTOS -->
             <h2>Próximos Eventos</h2>
-            <div class="event-list">
-                <div class="wrapper-event-card">
+            <div class="events-grid">
+                <!-- CARD -->
+                <div class="event-card-container">
                     <div class="event-card">
-                        <div class="event-info-front">
-                            <img src="./Images/congreso_medico.png" alt="congreso medico">
-                            <h3>CONGRESO MEDICO PROVINCIAL</h3>
-                            <p class="date"><i class="far fa-calendar-alt"></i>13 y 14 de Junio, 2026</p>
-                            <p class="time"><i class="far fa-clock"></i> 10:00 AM - 12:00 PM</p>
-                            <p class="location"><i class="fas fa-map-marker-alt"></i> Salón de Conferencias GMA</p>
-                            <p>Espacio académico orientado a la actualización profesional y al intercambio de conocimientos en el área de la salud.</p>
-                            <!-- <a href="#" class="button-primary">Inscribirse</a> -->
+                        <!-- FRONT -->
+                        <div class="event-face event-front">
+                            <img src="./Images/congreso_medico.png">
+                            <div class="event-front-content">
+                                <h3>CONGRESO MÉDICO PROVINCIAL</h3>
+                                <p><i class="fa fa-calendar"></i>Sábado 13 a partir de la 1:30p.m. hasta las 7:30p.m. y domingo 14 de junio de 2026 a partir de las 8:00a.m. hasta las 3:30p.m.</p>
+                                <p><i class="fa fa-map-marker"></i>Universidad de Cundinamarca, seccional Ubaté, auditorio principal</p>
+                                <span>Congreso médico para actualización e intercambio profesional</span>
+                                <button class="btn-more">Más información</button>
+                            </div>
                         </div>
-                        <div class="event-info-back">
-                            <p>El próximo 13 y 14 de junio de 2026 se realizará el Congreso Médico organizado por Grupo Médicos Asociados, un espacio académico y científico diseñado para fortalecer la actualización profesional y el intercambio de conocimiento entre especialistas de diversas áreas de la salud. Durante estos dos días se desarrollarán conferencias, paneles y talleres con expertos, abordando temas de alto impacto clínico y tendencias actuales en medicina. El evento busca promover la reflexión, el aprendizaje continuo y la integración entre profesionales del sector, favoreciendo el desarrollo de buenas prácticas y la excelencia en la atención a los pacientes.Con esta iniciativa, la institución reafirma su compromiso con la formación permanente, la innovación en salud y la creación de espacios colaborativos que contribuyen al fortalecimiento del talento humano en el campo médico.</p>
+                        <!-- BACK -->
+                        <div class="event-face event-back">
+                            <p>El próximo 13 y 14 de junio de 2026 se realizará el Congreso Médico organizado por Grupo Médicos Asociados, un espacio académico y científico diseñado para fortalecer la actualización profesional y el intercambio de conocimiento entre especialistas de diversas áreas de la salud.<br><br>Durante estos dos días se desarrollarán conferencias, paneles y talleres con expertos, abordando temas de alto impacto clínico y tendencias actuales en medicina. El evento busca promover la reflexión, el aprendizaje continuo y la integración entre profesionales del sector, favoreciendo el desarrollo de buenas prácticas y la excelencia en la atención a los pacientes.<br><br>
+                            Con esta iniciativa, la institución reafirma su compromiso con la formación permanente, la innovación en salud y la creación de espacios colaborativos que contribuyen al fortalecimiento del talento humano en el campo médico.</p>
+                            <button class="btn-back">Volver</button>
                         </div>
                     </div>
                 </div>
-                
-
-                <!-- <div class="event-card">
-                    <img src="./Images/mental_events.jpg" alt="Charla de Salud Mental">
-                    <div class="event-info">
-                        <h3>Charla: Manejo del Estrés y la Ansiedad</h3>
-                        <p class="date"><i class="far fa-calendar-alt"></i> 25 de Julio, 2024</p>
-                        <p class="time"><i class="far fa-clock"></i> 3:00 PM - 5:00 PM</p>
-                        <p class="location"><i class="fas fa-map-marker-alt"></i> Auditorio Principal GMA</p>
-                        <p>Herramientas prácticas para mejorar tu bienestar emocional y reducir el estrés.</p>
-                        <a href="#" class="button-primary">Inscribirse</a>
-                    </div>
-                </div>
-
-                <div class="event-card">
-                    <img src="./Images/vacuna_events.jpg" alt="Campaña de Vacunación">
-                    <div class="event-info">
-                        <h3>Campaña de Vacunación Infantil Gratuita</h3>
-                        <p class="date"><i class="far fa-calendar-alt"></i> 5 de Agosto, 2024</p>
-                        <p class="time"><i class="far fa-clock"></i> 9:00 AM - 4:00 PM</p>
-                        <p class="location"><i class="fas fa-map-marker-alt"></i> Patio Central GMA</p>
-                        <p>Protege a tus hijos con las vacunas necesarias. ¡Te esperamos!</p>
-                        <a href="#" class="button-primary">Más Información</a>
-                    </div>
-                </div> -->
+                <!-- DUPLICA -->
             </div>
-        </section>
 
-        <section class="past-events">
-            <h2>Eventos Anteriores</h2>
-            <div class="past-events-grid">
-                <!-- Card past event #1 -->
-                <div class="wrapper-past-event-card">
-                    <div class="past-event-card">
-                        <div class="card-front-event">
-                            <img src="./Images/ecografias_events.png" alt="evento ecografias">
-                            <h3>BRIGADA ECOGRAFÍAS</h3>
-                            <p class="date"><i class="far fa-calendar-alt"></i>&ensp;Semana del 7 al 11 de Julio, 2025</p>
-                            <p>Jornada de Ecografías para Diagnóstico y Prevención.</p>
+            <!-- EVENTOS ANTERIORES -->
+            <h2 class="mt">Eventos Anteriores</h2>
+            <div class="events-grid">
+                <!-- reutilizas mismas cards -->
+                <div class="event-card-container">
+                    <div class="event-card">
+                        <div class="event-face event-front">
+                            <img src="./Images/pediatria_events.png">
+                            <div class="event-front-content">
+                                <h3>JORNADA DE PEDIATRIA</h3>
+                                <p><i class="fa fa-calendar"></i>11 de Octubre 2025</p>
+                                <p><i class="fa fa-map-marker"></i> Ubaté</p>
+                                <span>Atención pediátrica integral para niños y adolescentes</span>
+                                <button class="btn-more">Más información</button>
+                            </div>
                         </div>
-                        <div class="card-back-event">
-                            <p>Del 7 al 11 de julio se llevó a cabo una jornada especial de ecografías diagnósticas, orientada a la detección oportuna de enfermedades en órganos como hígado, riñones, tiroides, próstata y abdomen, entre otros.<br><br>
-                            Durante la actividad se ofrecieron estudios ecográficos a un valor accesible, realizados por profesionales certificados y con resultados confiables, garantizando atención a hombres y mujeres de todas las edades. Asimismo, se desarrolló una jornada específica de ecografías ginecológicas y obstétricas el 10 de julio a las 4:00 p.m.<br><br>
-                            Con esta iniciativa, la institución reafirmó su compromiso con la prevención, el diagnóstico temprano y el acceso a servicios de apoyo diagnóstico de calidad para la comunidad.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card past event #2 -->
-                <div class="wrapper-past-event-card">
-                    <div class="past-event-card">
-                        <div class="card-front-event">
-                            <img src="./Images/pediatria_events.png" alt="evento pediatria">
-                            <h3>JORNADA DE PEDIATRÍA</h3>
-                            <p class="date"><i class="far fa-calendar-alt"></i>&ensp;11 de Octubre, 2025</p>
-                            <p>Atención Pediátrica Integral para Niños y Adolescentes.</p>
-                        </div>
-                        <div class="card-back-event">
-                            <p>El 11 de octubre de 2025 se llevó a cabo la Brigada de Salud Pediátrica, una jornada integral enfocada en la atención y el bienestar de niños y adolescentes desde los 0 días hasta los 17 años.<br><br>Durante la actividad se brindó atención médica personalizada, acompañamiento psicológico y nutricional, desparasitación profiláctica, valoración de crecimiento y desarrollo, tamizaje auditivo y visual, así como orientación en alimentación complementaria y ablactación.<br><br>
+                        <div class="event-face event-back">
+                            <p>El 11 de octubre de 2025 se llevó a cabo la Brigada de Salud Pediátrica, una jornada integral enfocada en la atención y el bienestar de niños y adolescentes desde los 0 días hasta los 17 años.<br><br> Durante la actividad se brindó atención médica personalizada, acompañamiento psicológico y nutricional, desparasitación profiláctica, valoración de crecimiento y desarrollo, tamizaje auditivo y visual, así como orientación en alimentación complementaria y ablactación.<br><br>
                             Con esta iniciativa, la institución reafirmó su compromiso con la salud infantil, promoviendo la prevención, el diagnóstico oportuno y la educación a las familias, en un espacio accesible, humano y de alta calidad para la comunidad.</p>
+                            <button class="btn-back">Volver</button>
                         </div>
                     </div>
                 </div>
-                <!-- Card past event #3 -->
-                <div class="wrapper-past-event-card">
-                    <div class="past-event-card">
-                        <div class="card-front-event">
-                            <img src="./Images/navidad_events.png" alt="evento navidad">
-                            <h3>FERIA NAVIDEÑA</h3>
-                            <p class="date"><i class="far fa-calendar-alt"></i>&ensp;20 de Diciembre, 2025</p>
-                            <p>Feria Navideña Infantil de Integración Comunitaria.</p>
+                <div class="event-card-container">
+                    <div class="event-card">
+                        <div class="event-face event-front">
+                            <img src="./Images/navidad_events.png">
+                            <div class="event-front-content">
+                                <h3>FERIA NAVIDEÑA</h3>
+                                <p><i class="fa fa-calendar"></i>20 de Diciembre 2025</p>
+                                <p><i class="fa fa-map-marker"></i> Ubaté</p>
+                                <span>Evento navideño infantil de integración comunitaria</span>
+                                <button class="btn-more">Más información</button>
+                            </div>
                         </div>
-                        <div class="card-back-event">
+                        <div class="event-face event-back">
                             <p>El pasado 20 de diciembre se llevó a cabo la Feria Navideña Infantil, un evento organizado para brindar un espacio de integración, alegría y celebración a los niños y sus familias.<br><br>
                             La actividad se realizó en la cancha contigua al cementerio, iniciando a las 9:00 a.m., y contó con una amplia participación de la comunidad. Fue una jornada 100 % gratuita, diseñada especialmente para fortalecer los lazos familiares y promover valores como la solidaridad y la unión en esta temporada decembrina.<br><br>
                             Con esta iniciativa, la institución reafirmó su compromiso social, generando espacios recreativos y comunitarios que contribuyen al bienestar integral de la población infantil.</p>
+                            <button class="btn-back">Volver</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="event-card-container">
+                    <div class="event-card">
+                        <div class="event-face event-front">
+                            <img src="./Images/ecografias_events.png">
+                            <div class="event-front-content">
+                                <h3>BRIGADA ECOGRAFÍAS</h3>
+                                <p><i class="fa fa-calendar"></i>Semana del 7 al 11 de Julio 2025</p>
+                                <p><i class="fa fa-map-marker"></i>Ubaté</p>
+                                <span>Jornada de ecografías para diagnóstico temprano</span>
+                                <button class="btn-more">Más información</button>
+                            </div>
+                        </div>
+                        <div class="event-face event-back">
+                            <p>Del 7 al 11 de julio se llevó a cabo una jornada especial de ecografías diagnósticas, orientada a la detección oportuna de enfermedades en órganos como hígado, riñones, tiroides, próstata y abdomen, entre otros.<br><br>
+                            Durante la actividad se ofrecieron estudios ecográficos a un valor accesible, realizados por profesionales certificados y con resultados confiables, garantizando atención a hombres y mujeres de todas las edades. Asimismo, se desarrolló una jornada específica de ecografías ginecológicas y obstétricas el 10 de julio a las 4:00 p.m.<br><br>
+                            Con esta iniciativa, la institución reafirmó su compromiso con la prevención, el diagnóstico temprano y el acceso a servicios de apoyo diagnóstico de calidad para la comunidad.</p>
+                            <button class="btn-back">Volver</button>
                         </div>
                     </div>
                 </div>
@@ -185,6 +181,7 @@
                 <span class="material-symbols-rounded">close</span>
             </div>
         </section>
+        <script src="./eventos.js"></script>
         <script src="./chatbot.js"></script>
     </main>
 
