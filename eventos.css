@@ -78,7 +78,8 @@
 
 .events-grid{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 350px));
+    justify-content: center;
     gap: 40px;
 }
 
@@ -161,11 +162,11 @@
 .event-back{
     background: linear-gradient(135deg,#0d2a6a,#243c78);
     color: white;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between; /* 🔥 mejor distribución */
-    padding: 20px;
+    padding: 30px 20px;
     transform: translateY(100%);
     opacity: 0;
     transition: all .5s ease;
