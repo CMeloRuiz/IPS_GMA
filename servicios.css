@@ -120,7 +120,7 @@
     left: -80px;
     width: 300px;
     text-align: center;
-    background: #e53935;
+    background: #e538357c;
     color: white;
     padding: 10px 100px;
     font-size: 20px;
@@ -130,7 +130,7 @@
 }
 
 /* EFECTO OPCIONAL (oscurecer card) */
-#cardiologia::after{
+.disabled-card::after{
     content: "";
     position: absolute;
     inset: 0;
@@ -205,6 +205,10 @@
 .button-primary:hover {
     background-color: #667188;
 }
+
+/* .chatbot-message {
+    white-space: pre-line;
+} */
 
 @media (max-width: 900px) {
     .category-card {
