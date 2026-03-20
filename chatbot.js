@@ -8,30 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let welcomeMessageSent = false;
 
-    const faq = {
-        "direccion": "Nuestra direccion es: Calle 4 #8-84, Edificio Ricaurte / Ubaté",
-        "dirección": "Nuestra direccion es: Calle 4 #8-84, Edificio Ricaurte / Ubaté",
-        "teléfono": "Te puedes comunicar con nosotros a los telefonos: 3104099029 y 3202046646",
-        "teléfonos": "Te puedes comunicar con nosotros a los telefonos: 3104099029 y 3202046646",
-        "telefono": "Te puedes comunicar con nosotros a los telefonos: 3104099029 y 3202046646",
-        "telefonos": "Te puedes comunicar con nosotros a los telefonos: 3104099029 y 3202046646",
-        "telefonico": "Te puedes comunicar con nosotros a los telefonos: 3104099029 y 3202046646",
-        "telefónico": "Te puedes comunicar con nosotros a los telefonos: 3104099029 y 3202046646",
-        "cita": "Para agendar tu cita, puedes llamar a nuestra línea telefónica o usar el formulario de contacto en nuestra web.",
-        "citas": "Para agendar tu cita, puedes llamar a nuestra línea telefónica o usar el formulario de contacto en nuestra web.",
-        "horario": "Nuestro horario de atención es de Lunes a Viernes de 8:00 a.m. a 5:00 p.m.",
-        "servicio": "Ofrecemos servicios de nutrición, psicología, pediatría, y otros. Puedes ver el listado completo en la sección de 'Servicios'.",
-        "servicios": "Ofrecemos servicios de nutrición, psicología, pediatría, y otros. Puedes ver el listado completo en la sección de 'Servicios'.",
-        "ubicacion": "Estamos ubicados en [Tu Dirección]. Puedes encontrar el mapa en la sección de 'Contacto'.",
-        "seguros": "Trabajamos con [Nombres de seguros]. Por favor, confirma tu plan con tu aseguradora.",
-        "hola": "¡Hola! Soy el asistente virtual de la IPS Grupo Medicos Asociados. ¿En qué puedo ayudarte?",
-        "gracias": "De nada, estoy para servirte.",
-        "ayuda": "Puedo responder preguntas sobre horarios, servicios, ubicaciones y citas. Si necesitas algo más, por favor contáctanos directamente.",
-        "defecto": "Lo siento, no entiendo tu pregunta. ¿Podrías ser más específico? Te puedo dar información sobre citas, horarios, o servicios."
-    };
-
     const mainMenu = `
-        Hola , soy MediBot GMA, el asistente virtual de GRUPO MEDICOS ASOCIADOS.
         Por favor selecciona una opción:
 
         1. Citas Médicas.
@@ -42,6 +19,11 @@ document.addEventListener('DOMContentLoaded', () => {
         6. Hablar con un asesor.
 
         (Escribe 0 para volver a este menú en cualquier momento)`;
+
+    const welcomeMessage = `
+        Hola, soy MediBot GMA, el asistente virtual de GRUPO MEDICOS ASOCIADOS.
+
+        ${mainMenu}`;
 
     function formatMessage(text) {
         // Detectar URLs
@@ -62,7 +44,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function getBotResponse(userMessage) {
         const cleanMessage = userMessage.toLowerCase().trim();
+        // 🔹 SALUDOS
+        if (["hola", "buenas", "buenos dias", "buen día"].some(word => cleanMessage.includes(word))) {
+            return `¡Hola! 👋
+            Soy MediBot GMA, tu asistente virtual.
+            ${mainMenu}`;
+        }
 
+        // 🔹 DESPEDIDA / FINALIZAR
+        if (["adios", "hasta luego", "nos vemos", "chao", "finalizar", "terminar", "ok"].some(word => cleanMessage.includes(word))) {
+            return `👋 Gracias por comunicarte con Grupo Médicos Asociados.
+            Ha sido un gusto ayudarte.
+            Si necesitas algo más, puedes volver a escribir en cualquier momento.`;
+        }
+
+        // 🔹 AGRADECIMIENTOS
+        if (cleanMessage.includes("gracias")) {
+            return `¡Con gusto! 😊  
+            Si necesitas algo más, aquí estaré para ayudarte.  
+            También puedes escribir 0 para volver al menú.`;
+        }
+
+        // 🔹 MENÚ
         if (
             cleanMessage === "0" ||
             cleanMessage === "menu" ||
@@ -71,113 +74,138 @@ document.addEventListener('DOMContentLoaded', () => {
             return mainMenu;
         }
 
-        // 👇 NUEVA LÓGICA POR NÚMEROS
+        // 🔹 INTENCIÓN → CITAS
+        if (cleanMessage.includes("cita")) {
+            return getBotResponse("1");
+        }
+
+        // 🔹 INTENCIÓN → UBICACIÓN
+        if (cleanMessage.includes("ubic") || cleanMessage.includes("direccion")) {
+            return getBotResponse("2");
+        }
+
+        // 🔹 INTENCIÓN → SERVICIOS
+        if (cleanMessage.includes("servicio") || cleanMessage.includes("especialidad")) {
+            return getBotResponse("3");
+        }
+
+        // 🔹 INTENCIÓN → OTROS
+        if (cleanMessage.includes("laboratorio") || cleanMessage.includes("examen")) {
+            return getBotResponse("4");
+        }
+
+        // 🔹 INTENCIÓN → CONTACTO
+        if (
+            cleanMessage.includes("telefono") ||
+            cleanMessage.includes("contacto") ||
+            cleanMessage.includes("whatsapp")
+        ) {
+            return getBotResponse("5");
+        }
+
+        // 🔹 INTENCIÓN → ASESOR
+        if (cleanMessage.includes("asesor") || cleanMessage.includes("humano")) {
+            return getBotResponse("6");
+        }
+
+        // 🔹 OPCIONES NUMÉRICAS
         if (cleanMessage === "1") {
             return `CITAS MÉDICAS:
 
             Agendar cita:
-            Puedes agendar tu cita aquí:
-            https://agenda.saludtools.com/2XoKI1lA
-            O llamando al +57 3104099029.
+            Puedes agendar tu cita en línea aquí: https://agenda.saludtools.com/2XoKI1lA , o llamando al +57 3104099029.
 
             Cancelar o reprogramar:
-            Mínimo 3 horas antes vía llamada o WhatsApp.
+            Puedes hacerlo mínimo 3 horas antes de tu cita llamando al +57 3104099029, enviando un mensaje vía WhatsApp al +57 3104099029 o por correo electrónico respondiendo al mensaje de confirmación de la cita.
 
-            Requisitos:
-            Documento de identidad y órdenes médicas.
+            Requisitos para la cita:
+            Debes traer documento de identidad y órdenes médicas si las tienes.
 
-            Factura electrónica:
-            Se solicita con nombre, documento y fecha de atención.
-            
-            Escribe 0 para volver al menú principal.`;
+            Escribe 0 para volver al menú.`;
         }
 
         if (cleanMessage === "2") {
-            return `UBICACIÓN Y HORARIOS:
+            return `UBICACIÓN:
 
             Dirección:
-            Ubaté, Cundinamarca
-            Calle 4 #8E-84
-            https://maps.app.goo.gl/6cAqS9KBC8ikYjMCA
+            Estamos ubicados en Ubaté, Cundinamarca en la Calle 4 #8E-84 . Mira cómo llegar en Google Maps: https://maps.app.goo.gl/6cAqS9KBC8ikYjMCA .
 
-            Horario:
-            Lunes a viernes: 7:00 a.m. - 7:00 p.m.
-            Sábados: 7:00 a.m. - 1:00 p.m.
-            Consulta prioritaria: 24/7
-            
-            Escribe 0 para volver al menú principal`;
+            Horario de atención:
+            Lunes a viernes: 7:00 a.m. - 7:00 p.m. Sábados: 7:00 a.m. - 1:00 p.m. Atención consulta externa Prioritaria 24/7.
+
+            Escribe 0 para volver al menú.`;
         }
 
         if (cleanMessage === "3") {
-            return `SERVICIOS Y ESPECIALIDADES:
+            return `SERVICIOS:
 
-            - Medicina general
-            - Pediatría
-            - Ginecología y Obstetricia
-            - Nutrición y dietética
-            - Psicología
-            - Enfermería
-            - Hospitalización domiciliaria
-            - Cardiología
-            - Medicina Interna
-            
-            Escribe 0 para volver al menú principal`;
+            Medicina general
+            Pediatría
+            Ginecología y Obstetricia
+            Nutrición y dietética
+            Psicología
+            Enfermeria
+            Hospitalización domiciliaria
+            Cardiología
+            Medicina Interna
+
+            Escribe 0 para volver al menú.`;
         }
 
         if (cleanMessage === "4") {
             return `OTROS SERVICIOS:
 
             Laboratorio clínico:
-            Lunes a sábado: 7:00 a.m. - 9:00 a.m.
+
+            Horarios para toma de laboratorios → De lunes a sábado: 7:00 a.m. - 9:00 a.m.
+            Entrega de resultados → Los resultados estarán disponibles de forma presencial o también los puede solicitar al número de WhatsApp +57 3104099029.
+
 
             Imágenes diagnósticas:
-            Solo con cita previa.
 
-            Electrocardiograma, HOLTER y MAPA:
-            Solo con cita previa.
+            Horarios para toma de ecografías y radiografías → únicamente bajo cita previa.
+            Entrega de resultados → Los resultados estarán disponibles de forma presencial o también los puede solicitar al número de WhatsApp +57 3104099029.
 
-            Resultados:
-            Presencial o por WhatsApp +57 3104099029.
-            
-            Escribe 0 para volver al menú principal`;
+            Electrocardiograma, HOLTER Y MAPA de tensión arterial:
+
+            Horarios → únicamente bajo cita previa.
+            Entrega de resultados → Los resultados estarán disponibles de forma presencial o también los puede solicitar al número de WhatsApp +57 3104099029.
+
+            Escribe 0 para volver al menú.`;
         }
 
         if (cleanMessage === "5") {
             return `CONTACTO:
 
-            Teléfono:
-            3104099029 / 3202046646
+            📞 Teléfono recepción y citas: 
+            +57 3104099029 - teléfono administración: 3202046646
 
-            WhatsApp:
-            +57 3104099029
+            📱 WhatsApp: 
+            +57 3104099029 - Administrativo: 3202046646
 
-            Correo:
-            pqrs@grupomedicosasociados.com
-
-            Formulario web:
-            https://www.grupomedicosasociados.com/contacto.html
+            📧 Correo electrónico: 
+            pqrs@grupomedicosasociados.com  
             
-            Escribe 0 para volver al menú principal`;
+            Formulario web: https://www.grupomedicosasociados.com/contacto.html
+
+            Escribe 0 para volver al menú.`;
         }
 
         if (cleanMessage === "6") {
-            return `Un asesor se pondrá en contacto contigo.
+            return `Un asesor te atenderá 👨‍⚕️
 
-            Puedes escribir directamente a WhatsApp:
             https://wa.me/573104099029
-            
-            Escribe 0 para volver al menú principal`;
+
+            Escribe 0 para volver al menú.`;
         }
 
-        let response = faq["defecto"];
+        // 🔴 DEFAULT
+        return `❌ No entendí tu mensaje.
 
-        for (const keyword in faq) {
-            if (cleanMessage.includes(keyword)) {
-                response = faq[keyword];
-                break;
-            }
-        }
-        return response;
+        Puedes escribir una opción (1-6) o algo como:
+        "citas", "teléfono", "servicios", etc.
+
+        ${mainMenu}`;
     }
 
     function handleUserInput() {
@@ -202,10 +230,10 @@ document.addEventListener('DOMContentLoaded', () => {
     function toggleChatbot() {
         chatbotContainer.classList.toggle('hidden');
 
-        let welcomeMessage = mainMenu;
+        let welcome = welcomeMessage;
 
         if (!chatbotContainer.classList.contains('hidden') && !welcomeMessageSent) {
-            addMessage(welcomeMessage, 'bot');
+            addMessage(welcome, 'bot');
             welcomeMessageSent = true; 
         }
     }
