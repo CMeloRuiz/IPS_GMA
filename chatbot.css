@@ -39,6 +39,16 @@
     cursor: pointer;
 }
 
+.chatbot-header img {
+    height: 40px;
+}
+
+.chatbot-header-title {
+    display: flex;
+    align-items: center;
+    /* gap: 10px; */
+}
+
 .chatbot-body {
     flex-grow: 1;
     padding: 15px;
