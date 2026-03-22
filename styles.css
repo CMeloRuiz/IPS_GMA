@@ -180,7 +180,7 @@ nav ul a {
 
 footer {
     background-color: #c0c0c0;
-    color: #666666;
+    color: #18284d;
     padding: 40px 20px;
     text-align: center;
     border-top: 1px solid #e0e0e0;
@@ -233,13 +233,13 @@ footer {
 }
 
 .footer-section ul li a {
-    color: #666666;
+    color: #18284d;
     transition: color 0.3s ease;
 }
 
-.footer-section ul li a:hover {
+/* .footer-section ul li a:hover {
     color: #0f3076;
-}
+} */
 
 .social-icons {
     display: flex;
@@ -297,11 +297,11 @@ footer {
     padding-top: 20px;
     border-top: 1px solid #e0e0e0;
     font-size: 0.8em;
-    color: #666666;
+    color: #18284d;
 }
 
 .footer-bottom > a {
-    color: #666666;
+    color: #18284d;
 }
 
 @media (max-width: 600px) {

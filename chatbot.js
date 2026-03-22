@@ -200,7 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // 🔴 DEFAULT
-        return `❌ No entendí tu mensaje.
+        return `❌ Opcion no valida.
 
         Puedes escribir una opción (1-6) o algo como:
         "citas", "teléfono", "servicios", etc.

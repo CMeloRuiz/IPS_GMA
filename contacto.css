@@ -67,7 +67,7 @@
     color: #223663;
 }
 
-.middle-triangle {
+/* .middle-triangle {
     background-color: #223663;
     width: 50px;
     height: 50px;
@@ -75,7 +75,7 @@
     right: 47%;
     top: 85%;
     transform: rotate(45deg);
-}
+} */
 
 .info-item {
     display: flex;
