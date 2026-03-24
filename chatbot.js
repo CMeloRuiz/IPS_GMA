@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeChatbot = document.getElementById('close-chatbot');
 
     let welcomeMessageSent = false;
+    let currentMenu = "main";
+    let menuHistory = [];
 
     const mainMenu = `
         Por favor selecciona una opción:
@@ -25,6 +27,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         ${mainMenu}`;
 
+    function goToMenu(menuName) {
+        menuHistory.push(currentMenu);
+        currentMenu = menuName;
+    }
+
     function formatMessage(text) {
         // Detectar URLs
         const urlRegex = /(https?:\/\/[^\s]+)/g;
@@ -42,170 +49,488 @@ document.addEventListener('DOMContentLoaded', () => {
         chatBody.scrollTop = chatBody.scrollHeight;
     }
 
+    function goBack() {
+        if (menuHistory.length === 0) {
+            currentMenu = "main";
+            return;
+        }
+        currentMenu = menuHistory.pop();
+    }
+
+    function getMenuMessage(menu) {
+
+        if (menu === "main") {
+            return mainMenu;
+        }
+
+        if (menu === "citas") {
+            return `CITAS MÉDICAS:
+
+            1. Agendar cita
+            2. Cancelar o reprogramar
+            3. Requisitos para la cita
+            4. Solicitar factura electrónica
+
+            9. Volver al menú anterior
+            0. Volver al menú principal`;
+        }
+
+        if (menu === "ubicacion") {
+            return `UBICACIÓN Y HORARIOS:
+
+            1. Dirección
+            2. Horario de atención
+
+            9. Volver al menú anterior
+            0. Volver al menú principal`;
+        }
+
+        if (menu === "otros") {
+            return `OTROS SERVICIOS:
+
+            1. Laboratorio clínico
+            2. Imágenes diagnósticas
+            3. Electrocardiograma, HOLTER y MAPA
+
+            9. Volver al menú anterior
+            0. Volver al menú principal`;
+        }
+
+        if (menu === "laboratorio") {
+            return `LABORATORIO CLÍNICO:
+
+            1. Horarios para toma de laboratorios
+            2. Entrega de resultados
+
+            9. Volver al menú anterior
+            0. Volver al menú principal`;
+        }
+
+        if (menu === "imagenes") {
+            return `IMÁGENES DIAGNÓSTICAS:
+
+            1. Horarios para toma
+            2. Entrega de resultados
+
+            9. Volver al menú anterior
+            0. Volver al menú principal`;
+        }
+
+        if (menu === "electro") {
+            return `ELECTROCARDIOGRAMA, HOLTER Y MAPA:
+
+            1. Horarios
+            2. Entrega de resultados
+
+            9. Volver al menú anterior
+            0. Volver al menú principal`;
+        }
+
+        return mainMenu;
+    }
+
     function getBotResponse(userMessage) {
         const cleanMessage = userMessage.toLowerCase().trim();
-        // 🔹 SALUDOS
+
+        // SALUDOS
         if (["hola", "buenas", "buenos dias", "buen día"].some(word => cleanMessage.includes(word))) {
+            currentMenu = "main";
             return `¡Hola! 👋
+
             Soy MediBot GMA, tu asistente virtual.
+
             ${mainMenu}`;
         }
 
-        // 🔹 DESPEDIDA / FINALIZAR
-        if (["adios", "hasta luego", "nos vemos", "chao", "finalizar", "terminar", "ok"].some(word => cleanMessage.includes(word))) {
+        // DESPEDIDAS
+        if (["adios", "hasta luego", "nos vemos", "chao", "finalizar", "terminar"].some(word => cleanMessage.includes(word))) {
             return `👋 Gracias por comunicarte con Grupo Médicos Asociados.
-            Ha sido un gusto ayudarte.
-            Si necesitas algo más, puedes volver a escribir en cualquier momento.`;
+
+            Ha sido un gusto ayudarte.`;
         }
 
-        // 🔹 AGRADECIMIENTOS
+        // AGRADECIMIENTO
         if (cleanMessage.includes("gracias")) {
-            return `¡Con gusto! 😊  
-            Si necesitas algo más, aquí estaré para ayudarte.  
-            También puedes escribir 0 para volver al menú.`;
+            return `¡Con gusto! 😊
+
+            Si necesitas algo más, aquí estaré para ayudarte.
+
+            (Escribe 0 para volver al menú principal)`;
         }
 
-        // 🔹 MENÚ
+        // VOLVER AL MENÚ PRINCIPAL
         if (
             cleanMessage === "0" ||
             cleanMessage === "menu" ||
             cleanMessage === "inicio"
         ) {
+            currentMenu = "main";
+            menuHistory = [];
             return mainMenu;
         }
 
-        // 🔹 INTENCIÓN → CITAS
-        if (cleanMessage.includes("cita")) {
-            return getBotResponse("1");
+        // VOLVER AL MENÚ ANTERIOR
+        if (cleanMessage === "9" || cleanMessage === "volver") {
+            goBack();
+            return getMenuMessage(currentMenu);
         }
 
-        // 🔹 INTENCIÓN → UBICACIÓN
-        if (cleanMessage.includes("ubic") || cleanMessage.includes("direccion")) {
-            return getBotResponse("2");
+        /*
+        =========================
+        MENU PRINCIPAL
+        =========================
+        */
+
+        if (currentMenu === "main") {
+
+            if (cleanMessage === "1") {
+                goToMenu("citas");
+                return `CITAS MÉDICAS:
+
+                1. Agendar cita
+                2. Cancelar o reprogramar
+                3. Requisitos para la cita
+                4. Solicitar factura electrónica
+
+                0. Volver al menú principal`;
+            }
+
+            if (cleanMessage === "2") {
+                goToMenu("ubicacion");
+                return `UBICACIÓN Y HORARIOS:
+
+                1. Dirección
+                2. Horario de atención
+
+                0. Volver al menú principal`;
+            }
+
+            if (cleanMessage === "3") {
+                return `SERVICIOS Y ESPECIALIDADES:
+
+                - Medicina general
+                - Pediatría
+                - Ginecología y Obstetricia
+                - Nutrición y dietética
+                - Psicología
+                - Enfermería
+                - Hospitalización domiciliaria
+                - Cardiología
+                - Medicina Interna
+
+                0. Volver al menú principal`;
+            }
+
+            if (cleanMessage === "4") {
+                goToMenu("otros");
+                return `OTROS SERVICIOS:
+
+                1. Laboratorio clínico
+                2. Imágenes diagnósticas
+                3. Electrocardiograma, HOLTER y MAPA
+
+                0. Volver al menú principal`;
+            }
+
+            if (cleanMessage === "5") {
+                return `CONTACTO:
+
+                Teléfono:
+                3104099029 / 3202046646
+
+                WhatsApp:
+                +57 3104099029
+
+                Correo:
+                pqrs@grupomedicosasociados.com
+
+                Formulario web:
+                https://www.grupomedicosasociados.com/contacto.html
+
+                0. Volver al menú principal`;
+            }
+
+            if (cleanMessage === "6") {
+                return `Un asesor se pondrá en contacto contigo.
+
+                https://wa.me/573104099029
+
+                0. Volver al menú principal`;
+            }
         }
 
-        // 🔹 INTENCIÓN → SERVICIOS
-        if (cleanMessage.includes("servicio") || cleanMessage.includes("especialidad")) {
-            return getBotResponse("3");
+        /*
+        =========================
+        MENU CITAS
+        =========================
+        */
+
+        if (currentMenu === "citas") {
+
+            if (cleanMessage === "1") {
+                goToMenu("citas_resultado");
+
+                return `AGENDAR CITA:
+
+                Puedes agendar tu cita aquí:
+                https://agenda.saludtools.com/2XoKI1lA
+
+                O llamando al +57 3104099029.
+
+                9. Volver al menú anterior
+                0. Volver al menú principal`;
+            }
+
+            if (cleanMessage === "2") {
+                goToMenu("citas_resultado");
+
+                return `CANCELAR O REPROGRAMAR:
+
+                Puedes hacerlo mínimo 3 horas antes:
+
+                - Llamando al +57 3104099029
+                - Enviando un mensaje vía WhatsApp
+                - O respondiendo el correo de confirmación.
+
+                9. Volver al menú anterior
+                0. Volver al menú principal`;
+            }
+
+            if (cleanMessage === "3") {
+                goToMenu("citas_resultado");
+
+                return `REQUISITOS:
+
+                Debes traer:
+
+                - Documento de identidad
+                - Órdenes médicas
+
+                9. Volver al menú anterior
+                0. Volver al menú principal`;
+            }
+
+            if (cleanMessage === "4") {
+                goToMenu("citas_resultado");
+
+                return `FACTURA ELECTRÓNICA:
+
+                Se solicitará:
+
+                - Nombre del paciente
+                - Tipo y número de documento
+                - Fecha de la atención
+
+                9. Volver al menú anterior
+                0. Volver al menú principal`;
+            }
         }
 
-        // 🔹 INTENCIÓN → OTROS
-        if (cleanMessage.includes("laboratorio") || cleanMessage.includes("examen")) {
-            return getBotResponse("4");
+        if (currentMenu === "citas_resultado") {
+            // estado intermedio
         }
 
-        // 🔹 INTENCIÓN → CONTACTO
-        if (
-            cleanMessage.includes("telefono") ||
-            cleanMessage.includes("contacto") ||
-            cleanMessage.includes("whatsapp")
-        ) {
-            return getBotResponse("5");
+        /*
+        =========================
+        MENU UBICACION
+        =========================
+        */
+
+        if (currentMenu === "ubicacion") {
+
+            if (cleanMessage === "1") {
+                goToMenu("ubicacion_resultado");
+
+                return `DIRECCIÓN:
+
+                Calle 4 #8E-84
+                Ubaté, Cundinamarca
+
+                https://maps.app.goo.gl/6cAqS9KBC8ikYjMCA
+
+                9. Volver al menú anterior
+                0. Volver al menú principal`;
+            }
+
+            if (cleanMessage === "2") {
+                goToMenu("ubicacion_resultado");
+
+                return `HORARIO:
+
+                Lunes a viernes:
+                7:00 a.m. - 7:00 p.m.
+
+                Sábados:
+                7:00 a.m. - 1:00 p.m.
+
+                Consulta prioritaria 24/7.
+
+                9. Volver al menú anterior
+                0. Volver al menú principal`;
+            }
         }
 
-        // 🔹 INTENCIÓN → ASESOR
-        if (cleanMessage.includes("asesor") || cleanMessage.includes("humano")) {
-            return getBotResponse("6");
+        if (currentMenu === "ubicacion_resultado") {
+            // estado intermedio
         }
 
-        // 🔹 OPCIONES NUMÉRICAS
-        if (cleanMessage === "1") {
-            return `CITAS MÉDICAS:
+        /*
+        =========================
+        MENU OTROS SERVICIOS
+        =========================
+        */
 
-            Agendar cita:
-            Puedes agendar tu cita en línea aquí: https://agenda.saludtools.com/2XoKI1lA , o llamando al +57 3104099029.
+        if (currentMenu === "otros") {
 
-            Cancelar o reprogramar:
-            Puedes hacerlo mínimo 3 horas antes de tu cita llamando al +57 3104099029, enviando un mensaje vía WhatsApp al +57 3104099029 o por correo electrónico respondiendo al mensaje de confirmación de la cita.
+            if (cleanMessage === "1") {
+                goToMenu("laboratorio");
 
-            Requisitos para la cita:
-            Debes traer documento de identidad y órdenes médicas si las tienes.
+                return `LABORATORIO CLÍNICO:
 
-            Escribe 0 para volver al menú.`;
+                1. Horarios para toma de laboratorios
+                2. Entrega de resultados
+
+                9. Volver al menú anterior
+                0. Volver al menú principal`;
+            }
+
+            if (cleanMessage === "2") {
+                goToMenu("imagenes");
+
+                return `IMÁGENES DIAGNÓSTICAS:
+
+                1. Horarios para toma
+                2. Entrega de resultados
+
+                9. Volver al menú anterior
+                0. Volver al menú principal`;
+            }
+
+            if (cleanMessage === "3") {
+                goToMenu("electro");
+
+                return `ELECTROCARDIOGRAMA, HOLTER Y MAPA:
+
+                1. Horarios
+                2. Entrega de resultados
+                
+                9. Volver al menú anterior
+                0. Volver al menú principal`;
+            }
         }
 
-        if (cleanMessage === "2") {
-            return `UBICACIÓN:
-
-            Dirección:
-            Estamos ubicados en Ubaté, Cundinamarca en la Calle 4 #8E-84 . Mira cómo llegar en Google Maps: https://maps.app.goo.gl/6cAqS9KBC8ikYjMCA .
-
-            Horario de atención:
-            Lunes a viernes: 7:00 a.m. - 7:00 p.m. Sábados: 7:00 a.m. - 1:00 p.m. Atención consulta externa Prioritaria 24/7.
-
-            Escribe 0 para volver al menú.`;
+        if (currentMenu === "otros_resultado") {
+            // estado intermedio
         }
 
-        if (cleanMessage === "3") {
-            return `SERVICIOS:
+        /*
+        SUBMENU LABORATORIO
+        */
 
-            Medicina general
-            Pediatría
-            Ginecología y Obstetricia
-            Nutrición y dietética
-            Psicología
-            Enfermeria
-            Hospitalización domiciliaria
-            Cardiología
-            Medicina Interna
+        if (currentMenu === "laboratorio") {
 
-            Escribe 0 para volver al menú.`;
+            if (cleanMessage === "1") {
+                goToMenu("laboratorio_resultado");
+
+                return `HORARIOS:
+
+                De lunes a sábado:
+                7:00 a.m. - 9:00 a.m.
+
+                9. Volver al menú anterior
+                0. Volver al menú principal`;
+            }
+
+            if (cleanMessage === "2") {
+                goToMenu("laboratorio_resultado");
+
+                return `ENTREGA DE RESULTADOS:
+
+                Disponible:
+
+                - De forma presencial
+                - O vía WhatsApp al +57 3104099029
+
+                9. Volver al menú anterior
+                0. Volver al menú principal`;
+            }
         }
 
-        if (cleanMessage === "4") {
-            return `OTROS SERVICIOS:
-
-            Laboratorio clínico:
-
-            Horarios para toma de laboratorios → De lunes a sábado: 7:00 a.m. - 9:00 a.m.
-            Entrega de resultados → Los resultados estarán disponibles de forma presencial o también los puede solicitar al número de WhatsApp +57 3104099029.
-
-
-            Imágenes diagnósticas:
-
-            Horarios para toma de ecografías y radiografías → únicamente bajo cita previa.
-            Entrega de resultados → Los resultados estarán disponibles de forma presencial o también los puede solicitar al número de WhatsApp +57 3104099029.
-
-            Electrocardiograma, HOLTER Y MAPA de tensión arterial:
-
-            Horarios → únicamente bajo cita previa.
-            Entrega de resultados → Los resultados estarán disponibles de forma presencial o también los puede solicitar al número de WhatsApp +57 3104099029.
-
-            Escribe 0 para volver al menú.`;
+        if (currentMenu === "laboratorio_resultado") {
         }
 
-        if (cleanMessage === "5") {
-            return `CONTACTO:
+        /*
+        SUBMENU IMAGENES
+        */
 
-            📞 Teléfono recepción y citas: 
-            +57 3104099029 - teléfono administración: 3202046646
+        if (currentMenu === "imagenes") {
 
-            📱 WhatsApp: 
-            +57 3104099029 - Administrativo: 3202046646
+            if (cleanMessage === "1") {
+                goToMenu("imagenes_resultado");
+                return `HORARIOS:
 
-            📧 Correo electrónico: 
-            pqrs@grupomedicosasociados.com  
-            
-            Formulario web: https://www.grupomedicosasociados.com/contacto.html
+                Ecografías y radiografías:
 
-            Escribe 0 para volver al menú.`;
+                Únicamente bajo cita previa.
+
+                9. Volver al menú anterior
+                0. Volver al menú principal`;
+            }
+
+            if (cleanMessage === "2") {
+                return `ENTREGA DE RESULTADOS:
+
+                Disponible:
+
+                - De forma presencial
+                - O vía WhatsApp al +57 3104099029
+
+                9. Volver al menú anterior
+                0. Volver al menú principal`;
+            }
         }
 
-        if (cleanMessage === "6") {
-            return `Un asesor te atenderá 👨‍⚕️
-
-            https://wa.me/573104099029
-
-            Escribe 0 para volver al menú.`;
+        if (currentMenu === "imagenes_resultado") {
         }
 
-        // 🔴 DEFAULT
-        return `❌ Opcion no valida.
+        /*
+        SUBMENU ELECTRO
+        */
 
-        Puedes escribir una opción (1-6) o algo como:
-        "citas", "teléfono", "servicios", etc.
+        if (currentMenu === "electro") {
 
-        ${mainMenu}`;
+            if (cleanMessage === "1") {
+                goToMenu("electro_resultado");
+                return `HORARIOS:
+
+                Únicamente bajo cita previa.
+
+                9. Volver al menú anterior
+                0. Volver al menú principal`;
+            }
+
+            if (cleanMessage === "2") {
+                goToMenu("electro_resultado");
+                return `ENTREGA DE RESULTADOS:
+
+                Disponible:
+
+                - De forma presencial
+                - O vía WhatsApp al +57 3104099029
+
+                9. Volver al menú anterior
+                0. Volver al menú principal`;
+            }
+        }
+
+        if (currentMenu === "electro_resultado") {
+        }
+
+        return `❌ Opción inválida.
+
+        Por favor selecciona una opción válida.
+
+        (Escribe 0 para volver al menú principal)`;
     }
 
     function handleUserInput() {
