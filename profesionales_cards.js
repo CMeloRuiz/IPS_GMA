@@ -1,27 +1,20 @@
 document.addEventListener("DOMContentLoaded", function () {
-
     const cards = document.querySelectorAll(".card-wrapper");
 
     cards.forEach(function (card) {
-
         const button = card.querySelector(".btn-flip");
-
-        if (!button) return;
+        const buttonBack = card.querySelector(".btn-flip-back");
 
         button.addEventListener("click", function (e) {
-
             e.preventDefault();
             e.stopPropagation();
-
-            // Solo en responsive
-            if (window.innerWidth <= 1024) {
-
-                card.classList.toggle("flipped");
-
-            }
-
+            card.classList.toggle("flipped");
         });
 
+        buttonBack.addEventListener("click", function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            card.classList.remove("flipped");
+        });
     });
-
 });
