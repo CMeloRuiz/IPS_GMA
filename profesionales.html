@@ -42,10 +42,6 @@
             </nav>
 
             <div class="header-buttons" id="header-buttons">
-                <!-- <a href="https://wa.me/573104099029" class="header-btn" style="background-color: #008c9e;" target="_blank">
-                    <i class="fa-solid fa-user-plus" style="margin-right: 7px;"></i>
-                    Afiliate ahora
-                </a> -->
                 <a href="https://agenda.saludtools.com/2XoKI1lA" class="header-btn" target="_blank">
                     <i class="fa-solid fa-calendar-days" style="margin-right: 7px;"></i>
                     Agenda tu cita
@@ -356,36 +352,5 @@
             &copy; 2025 Grupo Médicos Asociados. Todos los derechos reservados | Pagina Web Desarrollada por <a href="https://vortexdev.io/" target="_blank">VortexDev</a>
         </div>
     </footer>
-
-    <!-- <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const searchBar = document.getElementById('searchBar');
-            const specialtyFilter = document.getElementById('specialtyFilter');
-            const professionalCards = document.querySelectorAll('.professional-card');
-
-            function filterProfessionals() {
-                const searchTerm = searchBar.value.toLowerCase();
-                const selectedSpecialty = specialtyFilter.value;
-
-                professionalCards.forEach(card => {
-                    const name = card.querySelector('h3').textContent.toLowerCase();
-                    const specialty = card.querySelector('.specialty').textContent;
-                    const description = card.querySelector('.description').textContent.toLowerCase();
-
-                    const matchesSearch = name.includes(searchTerm) || description.includes(searchTerm) || specialty.toLowerCase().includes(searchTerm);
-                    const matchesSpecialty = selectedSpecialty === "" || specialty === selectedSpecialty;
-
-                    if (matchesSearch && matchesSpecialty) {
-                        card.style.display = 'block';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-            }
-
-            searchBar.addEventListener('keyup', filterProfessionals);
-            specialtyFilter.addEventListener('change', filterProfessionals);
-        });
-    </script> -->
 </body>
 </html>
