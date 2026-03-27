@@ -45,7 +45,7 @@
     margin-bottom: 25px;
 }
 
-.hero-btn {
+/* .hero-btn {
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -61,6 +61,56 @@
 .hero-btn:hover {
     background-color: #e6eef5;
     transform: translateY(-2px);
+} */
+
+/* CONTENEDOR DE BOTONES */
+
+.hero-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+/* BOTON BASE */
+
+.hero-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 12px 22px;
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: all 0.2s ease;
+}
+
+/* BOTON PRINCIPAL */
+
+.hero-btn.primary {
+    background-color: #ffffff;
+    color: #2d5677;
+}
+
+.hero-btn.primary:hover {
+    background-color: #e6eef5;
+    transform: translateY(-2px);
+}
+
+/* BOTON SECUNDARIO */
+
+.hero-btn.secondary {
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+}
+
+.hero-btn.secondary:hover {
+    background-color: #ffffff;
+    color: #2d5677;
 }
 
 .slide-image {
