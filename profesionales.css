@@ -129,6 +129,7 @@
     border: none;
     border-radius: 8px;
     background: #d3d6df;
+    color: #212121;
     cursor: pointer;
     font-size: 16px;
     transition: all .3s ease;
