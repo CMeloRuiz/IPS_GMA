@@ -34,7 +34,8 @@ header.scrolled .header-top {
 }
 
 .header-top {
-    background-color: #0f3076;
+    /* background-color: #0f3076; */
+    background-color: #2d5677;
     color: #fff;
     height: 30px;
     padding: 10px 50px;
@@ -59,7 +60,7 @@ header.scrolled .header-top {
 }
 
 .header-bottom {
-    background-color: #fff;
+    background-color: #ffffff;
     height: 100px;
     display: flex;
     justify-content: space-between;
@@ -92,7 +93,7 @@ nav ul a {
 
 .header-btn {
     padding: 10px 20px;
-    background-color: #355979;
+    background-color: #2d5677;
     color: #fff;
     font-size: 12px;
     border-radius: 10px;
