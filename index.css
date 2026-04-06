@@ -32,22 +32,29 @@
 .hero-left-buttons {
     display: flex;
     gap: 30px;
+    width: 100%;
 }
 
 .hero-left-buttons a {
     background-color: #fff;
     text-align: center;
     padding: 20px;
-    width: 200px;
+    flex: 1;
     color: #082c49;
     font-size: 0.97rem;
     font-weight: 500;
     border-radius: 10px;
-    transition: 0.3s all;
+    transition: 
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background-color 0.25s ease,
+        color 0.25s ease;
 }
 
 .hero-left-buttons a:hover {
-    transform: scale(1.05);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    background-color: #f4f6f8;
 }
 
 .hero-right {
