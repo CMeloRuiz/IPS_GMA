@@ -1,9 +1,7 @@
-/* Hero */
-
 .hero-container {
     min-height: 80vh;
     margin-top: 20px;
-    background-color: #2d5677;
+    background: linear-gradient(135deg, #0F2AD1, #0E92D2);
     display: flex;
     justify-content: space-between;
     align-items: stretch;
@@ -25,8 +23,10 @@
     font-weight: 500;
 }
 
-.hero-left .hero-text h2 {
+.hero-left .hero-text h2,
+.hero-left .hero-text p {
     font-weight: 500;
+    color: #E2E8F0;
 }
 
 .hero-left-buttons {
@@ -36,11 +36,11 @@
 }
 
 .hero-left-buttons a {
-    background-color: #fff;
+    background-color: #0E92D2;
     text-align: center;
     padding: 20px;
     flex: 1;
-    color: #082c49;
+    color: #fff;
     font-size: 0.97rem;
     font-weight: 500;
     border-radius: 10px;
@@ -51,10 +51,14 @@
         color 0.25s ease;
 }
 
+.hero-left-buttons a:last-child {
+    background-color: #2FBF71;
+}
+
 .hero-left-buttons a:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-    background-color: #f4f6f8;
+    background-color: #0A1C9A;
 }
 
 .hero-right {
@@ -66,6 +70,273 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.about-us-short {
+    padding: 100px 50px;
+}
+
+.about-us-short .container {
+    padding: 30px;
+    background: #E2E8F0;
+    border-radius: 20px;
+}
+
+.about-us-short .content-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.about-us-short .circle-frame {
+    width: 500px;
+    height: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+} 
+
+.about-us-short .image-container {
+    position: relative;
+}
+
+.about-us-short .image-container img {
+    width: 120%;
+    height: 100%;
+}
+
+.about-us-short .text-section h2 {
+    font-size: 30px;
+    color: #0F2AD1;
+    margin-bottom: 20px;
+}
+
+.about-us-short .text-section {
+    flex: 1;
+    padding: 40px 50px;
+    border-radius: 20px;
+    color: #2D3748;
+    position: relative;
+}
+
+.about-us-short .years-badge {
+    position: absolute;
+    top: -100px;
+    right: 40px;
+    background: linear-gradient(135deg, #0F2AD1, #0E92D2);
+    color: #fff;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    animation: float 3s ease-in-out infinite;
+}
+
+.about-us-short .years-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.about-us-short .description {
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.about-us-short .highlight {
+    color: #0F2AD1;
+    font-weight: 600;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+.services-overview {
+    text-align: center;
+    padding: 50px;
+    background-color: #E2E8F0; 
+}
+
+.services-overview h2 {
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: #0F2AD1;
+}
+
+.carousel-container {
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+}
+
+.carousel-container:hover .carousel-track {
+    animation-play-state: paused;
+}
+
+.service-card {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 15px;
+    margin: 0 1rem; 
+    height: 360px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.service-card img {
+    width: 250px;
+    height: 200px;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+}
+
+.service-card h3 {
+    color: #0F2AD1; 
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.more-info-btn {
+    background-color: #0E92D2;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    position: absolute;
+    bottom: 10px;
+    transition: 0.3s all;
+}
+
+.more-info-btn:hover {
+    background-color: #2FBF71; 
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+    gap: 10px; 
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.dot.active {
+    background-color: #0E92D2; 
+    transform: scale(1.2);
+}
+
+.contact-section {
+    background: linear-gradient(135deg, #0F2AD1, #0E92D2);
+    padding: 80px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.contact-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.contact-section p {
+    color: #F4F6F8;
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 50px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-section .contact-cards {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.contact-section .contact-card {
+    background: rgba(255, 255, 255, 0.477);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 20px;
+    padding: 30px;
+    width: 300px;
+    transition: all 0.3s ease;
+}
+
+.contact-section .contact-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.359);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.contact-section .icon img {
+    height: 70px;
+    margin-bottom: 20px;
+}
+
+.contact-section .contact-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #0A1C9A;
+}
+
+.contact-section .contact-card p {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    opacity: 0.9;
+    color: #0A1C9A;
+}
+
+.contact-section .cta-button {
+    background-color: #2FBF71;
+    color: #fff;
+    border: none;
+    padding: 15px 50px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact-section .cta-button:hover {
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
 }
 
 @media (max-width: 1024px) {
@@ -113,117 +384,6 @@
     }
 }
 
-/* Sección Quiénes Somos (corta) */
-
-.about-us-short {
-    padding: 100px 50px;
-}
-
-.about-us-short .container {
-    padding: 30px;
-    background: #a0b1b3;
-    border-radius: 20px;
-}
-
-.about-us-short .content-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-}
-
-.about-us-short .circle-frame {
-    border: 13px solid #304a5f;
-    width: 500px;
-    height: 500px;
-    border-radius: 50%;
-    overflow: hidden;
-    position: relative;
-} 
-
-.about-us-short .image-container {
-    position: relative;
-}
-
-.about-us-short .image-container img {
-    width: 120%;
-    height: 100%;
-}
-
-.about-us-short .text-section h2 {
-    font-size: 30px;
-    color: #fff;
-    margin-bottom: 20px;
-}
-
-.about-us-short .decorative-element {
-    position: absolute;
-    background: #2d5677;
-    border-radius: 50%;
-    opacity: 0.3;
-}
-
-.about-us-short .decorative-element.small {
-    width: 200px;
-    height: 200px;
-    top: -30px;
-    left: -30px;
-}
-
-.about-us-short .decorative-element.large {
-    width: 250px;
-    height: 250px;
-    bottom: -20px;
-    right: -20px;
-}
-
-.about-us-short .text-section {
-    flex: 1;
-    padding: 40px 50px;
-    border-radius: 20px;
-    background: linear-gradient(135deg, #32658f 0%, #314858 100%);
-    color: #fff;
-    position: relative;
-}
-
-.about-us-short .years-badge {
-    position: absolute;
-    top: -10px;
-    right: 40px;
-    background: rgba(255, 255, 255, 0.9);
-    color: #667eea;
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    animation: float 3s ease-in-out infinite;
-}
-
-.about-us-short .years-number {
-    font-size: 2.5rem;
-    font-weight: 800;
-    line-height: 1;
-}
-
-.about-us-short .description {
-    font-size: 14px;
-    line-height: 1.5;
-    text-align: justify;
-}
-
-.about-us-short .highlight {
-    color: #65e1e8;
-    font-weight: 600;
-}
-
-@keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
-}
-
 @media (max-width:1100px) {
     .about-us-short .content-wrapper {
         flex-direction: column;
@@ -268,200 +428,10 @@
     }
 }
 
-/* Services Overview */
-
-.services-overview {
-    text-align: center;
-    padding: 50px;
-    background-color: #a0b1b3; 
-}
-
-.services-overview h2 {
-    margin-bottom: 2rem;
-    font-size: 2.5rem;
-}
-
-.carousel-container {
-    overflow: hidden;
-}
-
-.carousel-track {
-    display: flex;
-}
-
-.carousel-container:hover .carousel-track {
-    animation-play-state: paused;
-}
-
-.service-card {
-    background-color: #fff;
-    border-radius: 20px;
-    padding: 15px;
-    margin: 0 1rem; 
-    height: 360px;
-    width: 300px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    position: relative;
-    transition: transform 0.3s ease;
-}
-
-.service-card img {
-    width: 250px;
-    height: 200px;
-    margin-bottom: 1rem;
-    border-radius: 10px;
-}
-
-.service-card h3 {
-    color: #344b94; 
-    margin-bottom: 0.5rem;
-    font-size: 1.4rem;
-    font-weight: 500;
-}
-
-.more-info-btn {
-    background-color: #19456a;
-    color: #fff;
-    border: none;
-    padding: 0.75rem 1.5rem;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    position: absolute;
-    bottom: 10px;
-    transition: 0.3s all;
-}
-
-.more-info-btn:hover {
-    background-color: #378eab; 
-}
-
-.carousel-dots {
-    display: flex;
-    justify-content: center;
-    margin-top: 1.5rem;
-    gap: 10px; 
-}
-
-.dot {
-    width: 12px;
-    height: 12px;
-    background-color: #eaeaea;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.dot.active {
-    background-color: #2a4a52; 
-    transform: scale(1.2);
-}
-
 @media (max-width: 400px) {
     .services-overview {
         padding: 30px;
     }
-}
-
-/* Sección de Contacto (corta) */
-.contact-section {
-    background-color: #8a94a6;
-    padding: 80px 20px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-}
-
-.contact-section::before {
-    content: '';
-    position: absolute;
-    width: 1200px;
-    height: 1500px;
-    background: rgba(24, 55, 116, 0.212);
-    border-radius: 50%;
-    top: -100px;
-    right: -300px;
-    animation: float 6s ease-in-out infinite;
-}
-
-.contact-section .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    position: relative;
-    z-index: 2;
-}
-
-.contact-section h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-}
-
-.contact-section p {
-    font-size: 1.2rem;
-    opacity: 0.9;
-    margin-bottom: 50px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.contact-section .contact-cards {
-    display: flex;
-    gap: 30px;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-bottom: 50px;
-}
-
-.contact-section .contact-card {
-    background: rgba(255,255,255,0.1);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255,255,255,0.2);
-    border-radius: 20px;
-    padding: 30px;
-    width: 300px;
-    transition: all 0.3s ease;
-}
-
-.contact-section .contact-card:hover {
-    transform: translateY(-10px);
-    background: rgba(255,255,255,0.15);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-}
-
-.contact-section .icon img {
-    height: 70px;
-    margin-bottom: 20px;
-}
-
-.contact-section .contact-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-}
-
-.contact-section .contact-card p {
-    font-size: 1.1rem;
-    margin-bottom: 8px;
-    opacity: 0.9;
-}
-
-.contact-section .cta-button {
-    background: linear-gradient(135deg, #32658f 0%, #314858 100%);
-    color: #fff;
-    border: none;
-    padding: 18px 40px;
-    border-radius: 50px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.contact-section .cta-button:hover {
-    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
 }
 
 

@@ -1,5 +1,5 @@
 .page-content {
-    background-color: #8891a3;
+    background-color: #F4F6F8;
 }
 
 .services-hero {
@@ -17,7 +17,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(to right, #0d2a6a, #3a445a);
+    background: linear-gradient(135deg, #0F2AD1, #0E92D2);
 }
 
 .services-hero h1 {
@@ -30,7 +30,7 @@
 .services-hero h2 {
     position: relative;
     z-index: 1;
-    color: #b3afaf;
+    color: #F4F6F8;
     font-weight: 500;
     margin-bottom: 20px;
 }
@@ -91,6 +91,7 @@
 }
 
 .category-card {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.363);
     position: relative;
     background-color: #fff;
     border-radius: 10px;
@@ -99,20 +100,13 @@
     align-items: center;
 }
 
-/* BADGE GRANDE */
-/* .badge-proximamente{
-    position: absolute;
-    top: 100px;
-    left: -100px;
-    background: #d62a3c90;
-    color: white;
-    padding: 10px 200px;
-    font-size: 24px;
-    font-weight: bold;
-    transform: rotate(-40deg);
-    z-index: 10;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-} */
+.category-card .card-content h2 {
+    color: #0F2AD1;
+}
+
+.category-card .card-content h3 {
+    color: #2D3748;
+}
 
 .badge-proximamente{
     position: absolute;
@@ -134,7 +128,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,0.2);
+    background: rgba(0, 0, 0, 0.088);
 }
 
 /* BOTÓN DESACTIVADO */
@@ -158,16 +152,10 @@
     padding: 25px;
 }
 
-.category-card h2 {
-    color: var(--primary-color);
-    font-size: 2em;
-    margin-bottom: 5px;
-}
-
 .category-card p {
     font-size: 1.1em;
     line-height: 1.6;
-    color: #555;
+    color: #2D3748;
     margin-bottom: 20px;
 }
 
@@ -183,17 +171,17 @@
     gap: 10px;
     margin-bottom: 10px;
     font-size: 1em;
-    color: #333;
+    color: #2D3748;
 }
 
 .category-card ul li i {
-    color: #4CAF50;
+    color: #2FBF71;
     font-size: 1.2em;
 }
 
 .button-primary {
     display: inline-block;
-    background-color: #3a445a;
+    background-color: #0E92D2;
     color: #fff;
     padding: 12px 25px;
     border-radius: 5px;
@@ -203,12 +191,8 @@
 }
 
 .button-primary:hover {
-    background-color: #667188;
+    background-color: #0A1C9A;
 }
-
-/* .chatbot-message {
-    white-space: pre-line;
-} */
 
 @media (max-width: 900px) {
     .category-card {

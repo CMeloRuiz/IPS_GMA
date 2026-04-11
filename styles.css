@@ -9,12 +9,8 @@
     list-style: none;
 }
 
-body {
-    color: #18284d;
-}
-
 .underline_title {
-    border-bottom: 3px solid #008c9e;
+    border-bottom: 3px solid #0F2AD1;
 }
 
 header {
@@ -34,8 +30,7 @@ header.scrolled .header-top {
 }
 
 .header-top {
-    /* background-color: #0f3076; */
-    background-color: #2d5677;
+    background: linear-gradient(to left, #0F2AD1, #0E92D2);
     color: #fff;
     height: 30px;
     padding: 10px 50px;
@@ -81,7 +76,7 @@ nav ul {
 
 nav ul a {
     padding-bottom: 5px;
-    color: #213a4e;
+    color: #0F2AD1;
     font-weight: 500;
 }
 
@@ -92,11 +87,16 @@ nav ul a {
 }
 
 .header-btn {
-    padding: 10px 20px;
-    background-color: #2d5677;
+    padding: 10px 30px;
+    background-color: #0E92D2;
     color: #fff;
-    font-size: 12px;
-    border-radius: 10px;
+    font-size: 14px;
+    border-radius: 20px;
+    transition: 0.5s all;
+}
+
+.header-btn:hover {
+    background-color: #0A1C9A;
 }
 
 .menu-bar {
@@ -168,20 +168,13 @@ nav ul a {
         justify-content: center;
         overflow: hidden;
     }
-
-    /* .whatsapp-button {
-        width: 50px;
-        height: 50px;
-        bottom: 30px;
-        right: 20px;
-    }  */
 }
 
 /* Footer */
 
 footer {
-    background-color: #c0c0c0;
-    color: #18284d;
+    background-color: #E2E8F0;
+    color: #2D3748;
     padding: 40px 20px;
     text-align: center;
     border-top: 1px solid #e0e0e0;
@@ -210,7 +203,7 @@ footer {
 }
 
 .footer-section h3 {
-    color: #18284d;
+    color: #2D3748;
     border-bottom: 3px solid #2c617e;
     margin-bottom: 20px;
     padding-bottom: 5px;
@@ -234,13 +227,9 @@ footer {
 }
 
 .footer-section ul li a {
-    color: #18284d;
+    color: #2D3748;
     transition: color 0.3s ease;
 }
-
-/* .footer-section ul li a:hover {
-    color: #0f3076;
-} */
 
 .social-icons {
     display: flex;
@@ -249,7 +238,7 @@ footer {
 }
 
 .social-icons i {
-    background-color: #0f3076;
+    background-color: #0E92D2;
     color: #fff;
     width: 50px;
     line-height: 50px;
@@ -290,7 +279,7 @@ footer {
 }
 
 .newsletter form button:hover {
-    background-color: #18284d;
+    background-color: #0E92D2;
 }
 
 .footer-bottom {
@@ -298,11 +287,11 @@ footer {
     padding-top: 20px;
     border-top: 1px solid #e0e0e0;
     font-size: 0.8em;
-    color: #18284d;
+    color: #2D3748;
 }
 
 .footer-bottom > a {
-    color: #18284d;
+    color: #2D3748;
 }
 
 @media (max-width: 600px) {

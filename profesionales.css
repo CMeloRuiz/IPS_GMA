@@ -1,5 +1,5 @@
 .profesionales-main {
-    background-color: #8891a3;
+    background-color: #fff;
 }
 
 .professionals-hero {
@@ -14,7 +14,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(to right, #0d2a6a, #3a445a);
+    background: linear-gradient(135deg, #0F2AD1, #0E92D2);
 }
 
 .professionals-hero h1 {
@@ -49,7 +49,8 @@
 }
 
 .card-inner {
-    background-color: #cccccc66;
+    background-color: #fff;
+    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.363);
     border-radius: 10px;
     width: 100%;
     height: 100%;
@@ -70,6 +71,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.card-front h2 {
+    color: #0F2AD1;
+}
+
+.card-front h3 {
+    color: #2D3748;
 }
 
 .card-front img {
@@ -98,13 +107,22 @@
     position: absolute;
     bottom: 15px;
     right: 15px;
-    background: #355979;
+    background: #0E92D2;
     color: #f0f0f0;
     border: none;
     border-radius: 6px;
     padding: 8px 12px;
     font-size: 12px;
     cursor: pointer;
+    transition: 0.3s all;
+}
+
+.btn-flip:hover {
+    background-color: #2FBF71;
+}
+
+.btn-flip-back:hover {
+    background-color: #2FBF71;
 }
 
 .card-wrapper.flipped .card-inner {
@@ -128,19 +146,19 @@
     width: 30vw;
     border: none;
     border-radius: 8px;
-    background: #d3d6df;
-    color: #212121;
+    background: #0E92D2;
+    color: #fff;
     cursor: pointer;
     font-size: 16px;
     transition: all .3s ease;
 }
 
 .tab-btn:hover {
-    background: #c1c6d6;
+    background: #0A1C9A;
 }
 
 .tab-btn.active {
-    background: #0d2a6a;
+    background: #2FBF71;
     color: white;
 }
 
