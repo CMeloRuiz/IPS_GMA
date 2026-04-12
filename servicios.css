@@ -46,6 +46,7 @@
 /* Carrusel Distintivos */
 
 .carousel {
+    background-color: #E2E8F0;
     margin: 50px auto;
     width: 90%;
     display: flex;
