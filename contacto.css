@@ -21,9 +21,11 @@
 }
 
 .contact-hero h1 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 32px;
     position: relative;
     z-index: 1;
-    font-size: 3em;
     margin-bottom: 10px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
@@ -65,7 +67,7 @@
 }
 
 .contact-info-block h2 {
-    color: #223663;
+    color: #0A1C9A;
 }
 
 .info-item {
@@ -79,7 +81,7 @@
 
 .info-item i {
     width: 40px;
-    color: #223663;
+    color: #0F2AD1;
     font-size: 1.5em;
     flex-shrink: 0;
     text-align: center;
@@ -98,7 +100,7 @@
 }
 
 .social-links i {
-    background-color: #344b81;
+    background-color: #0F2AD1;
     border-radius: 50%;
     width: 50px;
     line-height: 50px;
@@ -111,7 +113,7 @@
 
 .social-links i:hover {
     transform: scale(1.05);
-    background-color: #5970a5;
+    background-color: #0E92D2;
 }
 
 .contact-form .form-group {

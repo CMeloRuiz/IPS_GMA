@@ -21,9 +21,11 @@
 }
 
 .services-hero h1 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 32px;
     position: relative;
     z-index: 1;
-    font-size: 3em;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
@@ -102,7 +104,10 @@
 }
 
 .category-card .card-content h2 {
-    color: #0F2AD1;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    color: #0A1C9A;
+    margin-bottom: 10px;
 }
 
 .category-card .card-content h3 {
