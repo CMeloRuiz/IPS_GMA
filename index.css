@@ -58,7 +58,6 @@
 .hero-left-buttons a:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-    background-color: #0A1C9A;
 }
 
 .hero-right {
